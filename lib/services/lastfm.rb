@@ -9,15 +9,14 @@ module Services
   module LastFM
     class << self
 
-      # see: http://www.last.fm/api/authspec
       attr_accessor :api_key, :api_secret, :username, :auth_token, :session_key
 
       HOST = 'ws.audioscrobbler.com'
 
+      # see: http://www.last.fm/api/authspec
       def authenticate!
         raise AuthenticationError, 'Missing authentication property.' unless @api_key && @api_secret && @username && @auth_token
-        resp = ::LastFM::Auth.get_mobile_session( @username, @auth_token )
-        #TODO: @session_key = parse response xml with hpricot
+        @session_key = ::LastFM::Auth.get_mobile_session( @username, @auth_token )
       end
 
       def authenticated?
@@ -33,16 +32,22 @@ module Services
       end
 
       def requires_authentication
-        raise AuthenticationException, 'LastFM Authentication Required' unless authenticated?
+        raise AuthenticationError, 'LastFM Authentication Required' unless authenticated?
       end
 
       def send( method, secure = false, params = {} )
-        resp = Net::HTTP.get_response( HOST, generate_path( method, secure, params ) )
-        # TODO: find_errors(resp)
-        resp
+        response = Net::HTTP.get_response HOST, generate_path(method, secure, params)
+        response_xml = Hpricot.XML( response.body )
+        catch_errors( response_xml )
+        response_xml
       end
 
     private
+
+      def catch_errors( xml )
+        status = xml.at('lfm').attributes['status']
+        raise LastFMError, xml.at('error').inner_html if status == 'failed'
+      end
 
       def load_config_property( config, property )
         raise ConfigurationError, "Missing configuration property: #{property}" unless config.include?(property) && config[property]
@@ -77,5 +82,6 @@ module Services
   end
 end
 
+class LastFMError < StandardError; end
 class AuthenticationError < StandardError; end
 class ConfigurationError < StandardError; end

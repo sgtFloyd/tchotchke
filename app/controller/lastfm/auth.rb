@@ -8,7 +8,8 @@ module LastFM
 
       # see: http://www.last.fm/api/show?service=266
       def get_mobile_session( username, auth_token )
-        Services::LastFM.send( "#{TYPE}.getMobileSession", :secure, 'username' => username, 'authToken' => auth_token )
+        response = Services::LastFM.send( "#{TYPE}.getMobileSession", :secure, 'username' => username, 'authToken' => auth_token )
+        response.at("key").inner_html # return session key
       end
     
       # see: http://www.last.fm/api/show?service=125
