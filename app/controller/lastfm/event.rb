@@ -22,7 +22,7 @@ module LastFM
       end
     
       # see: http://www.last.fm/api/show?service=350
-      def share( event, recipient, public = nil, message = nil )
+      def share( event, recipient, publicize = nil, message = nil )
         Services::LastFM.requires_authentication
       end
     

@@ -45,7 +45,7 @@ module LastFM
       end
 
       # see: http://www.last.fm/api/show?service=436
-      def share( artist, album, public = nil, message = nil, recipient = nil )
+      def share( artist, album, publicize = nil, message = nil, recipient = nil )
         Services::LastFM.requires_authentication
       end
 
