@@ -4,6 +4,7 @@ require 'net/http'
 require 'yaml'
 
 require 'controller/lastfm/auth'
+require 'xml_helper'
 
 module Services
   module LastFM
@@ -16,7 +17,7 @@ module Services
       # see: http://www.last.fm/api/authspec
       def authenticate!
         raise AuthenticationError, 'Missing authentication property.' unless @api_key && @api_secret && @username && @auth_token
-        @session_key = ::LastFM::Auth.get_mobile_session( @username, @auth_token )
+        @session_key ||= ::LastFM::Auth.get_mobile_session( @username, @auth_token )
       end
 
       def authenticated?
@@ -35,11 +36,11 @@ module Services
         raise AuthenticationError, 'LastFM Authentication Required' unless authenticated?
       end
 
-      def send( method, secure = false, params = {} )
+      def get( method, secure = false, params = {} )
         response = Net::HTTP.get_response HOST, generate_path(method, secure, params)
         response_xml = Hpricot.XML( response.body )
         catch_errors( response_xml )
-        response_xml
+        XMLHelper.hpricot_to_hash( response_xml )
       end
 
     private
@@ -62,10 +63,10 @@ module Services
         params['method'] = method
         params['api_key'] = @api_key
         params['sk'] = @session_key if authenticated? && secure
-        params['api_sig'] = generate_method_signature( params ) if secure
+        params['api_sig'] = generate_method_signature( params )
         url = "/2.0/?method=#{params.delete('method')}"
         params.keys.each do |param|
-          url += "&#{param}=#{params.delete(param)}"
+          url += "&#{param}=#{params[param]}"
         end
         url
       end

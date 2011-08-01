@@ -4,5 +4,9 @@ $: << $ROOT + "/lib" << $ROOT + "/app"
 
 require 'services/lastfm'
 
+require 'controller/lastfm/artist'
+
 Services::LastFM.load_config
-Services::LastFM.authenticate!
+#Services::LastFM.authenticate!
+
+LastFM::Artist.get_info( "Cher" )

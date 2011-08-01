@@ -15,7 +15,7 @@ module LastFM
       end
 
       # see: http://www.last.fm/api/show?service=372
-      def add_track( artist, track )
+      def add_track( track, artist )
         Services::LastFM.requires_authentication
       end
 
@@ -42,12 +42,12 @@ module LastFM
       end
 
       # see: http://www.last.fm/api/show?service=525
-      def remove_scrobble( artist, track, timestamp )
+      def remove_scrobble( track, artist, timestamp )
         Services::LastFM.requires_authentication
       end
 
       # see: http://www.last.fm/api/show?service=526
-      def remove_track( artist, track )
+      def remove_track( track, artist )
         Services::LastFM.requires_authentication
       end
 
