@@ -9,4 +9,4 @@ require 'controller/lastfm/artist'
 Services::LastFM.load_config
 #Services::LastFM.authenticate!
 
-LastFM::Artist.get_info( "Cher" )
+puts LastFM::Artist.get_info( "Cher" )

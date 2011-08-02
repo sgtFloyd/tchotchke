@@ -1,3 +1,3 @@
 source :rubygems
 
-gem 'hpricot'
+gem 'xml-simple'

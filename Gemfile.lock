@@ -1,10 +1,10 @@
 GEM
   remote: http://rubygems.org/
   specs:
-    hpricot (0.8.4)
+    xml-simple (1.1.0)
 
 PLATFORMS
   x86-mingw32
 
 DEPENDENCIES
-  hpricot
+  xml-simple

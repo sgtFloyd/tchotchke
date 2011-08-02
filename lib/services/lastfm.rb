@@ -1,10 +1,9 @@
 require 'digest/md5'
-require 'hpricot'
 require 'net/http'
+require 'xmlsimple'
 require 'yaml'
 
 require 'controller/lastfm/auth'
-require 'xml_helper'
 
 module Services
   module LastFM
@@ -13,6 +12,9 @@ module Services
       attr_accessor :api_key, :api_secret, :username, :auth_token, :session_key
 
       HOST = 'ws.audioscrobbler.com'
+
+      FORCE_ARRAY = ['similar', 'tags']
+      KEY_ATTR = { 'image' => 'size' }
 
       # see: http://www.last.fm/api/authspec
       def authenticate!
@@ -38,16 +40,15 @@ module Services
 
       def get( method, secure = false, params = {} )
         response = Net::HTTP.get_response HOST, generate_path(method, secure, params)
-        response_xml = Hpricot.XML( response.body )
-        catch_errors( response_xml )
-        XMLHelper.hpricot_to_hash( response_xml )
+        data = XmlSimple.xml_in( response.body, 'ForceArray' => FORCE_ARRAY, 'KeyAttr' => KEY_ATTR )
+        catch_errors( data )
+        data
       end
 
     private
 
-      def catch_errors( xml )
-        status = xml.at('lfm').attributes['status']
-        raise LastFMError, xml.at('error').inner_html if status == 'failed'
+      def catch_errors( data )
+        raise LastFMError, data['error']['content'] if data['status'] == 'failed'
       end
 
       def load_config_property( config, property )
