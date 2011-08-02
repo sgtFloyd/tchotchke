@@ -13,13 +13,14 @@ module Services
 
       HOST = 'ws.audioscrobbler.com'
 
-      FORCE_ARRAY = ['similar', 'tags']
+      # XmlSimple configuration options
+      FORCE_ARRAY = [ 'similar', 'tags' ]
       KEY_ATTR = { 'image' => 'size' }
 
       # see: http://www.last.fm/api/authspec
       def authenticate!
         raise AuthenticationError, 'Missing authentication property.' unless @api_key && @api_secret && @username && @auth_token
-        @session_key ||= ::LastFM::Auth.get_mobile_session( @username, @auth_token )
+        @session_key ||= ::LastFM::Auth.get_mobile_session( @username, @auth_token )['session']['key']
       end
 
       def authenticated?
@@ -27,7 +28,7 @@ module Services
       end
 
       def load_config
-        config = YAML.load_file( $ROOT + "/config/lastfm.yml")
+        config = YAML.load_file( $ROOT + "/config/lastfm.yml" )
         @api_key = load_config_property( config, 'api_key' )
         @api_secret = load_config_property( config, 'api_secret' )
         @username = load_config_property( config, 'login_username' )
@@ -38,8 +39,15 @@ module Services
         raise AuthenticationError, 'LastFM Authentication Required' unless authenticated?
       end
 
+      # Send an HTTP get request to Last.fm, and convert the XML response to a hash before returning
+      #   method: api method to call
+      #   secure: whether sign the request with a method signature and session key
+      #     (one exception being auth methods, which require a method signature but no session key
+      #   params: hash of parameters to send, excluding method, api_key, api_sig, and sk
+      #
+      #   returns: a hash structure of the data contained in the response
       def get( method, secure = false, params = {} )
-        response = Net::HTTP.get_response HOST, generate_path(method, secure, params)
+        response = Net::HTTP.get_response( HOST, generate_path(method, secure, params) )
         data = XmlSimple.xml_in( response.body, 'ForceArray' => FORCE_ARRAY, 'KeyAttr' => KEY_ATTR )
         catch_errors( data )
         data
@@ -64,7 +72,7 @@ module Services
         params['method'] = method
         params['api_key'] = @api_key
         params['sk'] = @session_key if authenticated? && secure
-        params['api_sig'] = generate_method_signature( params )
+        params['api_sig'] = generate_method_signature( params ) if secure
         url = "/2.0/?method=#{params.delete('method')}"
         params.keys.each do |param|
           url += "&#{param}=#{params[param]}"
