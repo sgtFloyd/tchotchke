@@ -1,0 +1,1592 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>
+  Class: LastFM::Artist
+  
+    &mdash; Documentation by YARD 0.7.2
+  
+</title>
+
+  <link rel="stylesheet" href="../css/style.css" type="text/css" media="screen" charset="utf-8" />
+
+  <link rel="stylesheet" href="../css/common.css" type="text/css" media="screen" charset="utf-8" />
+
+<script type="text/javascript" charset="utf-8">
+  relpath = '..';
+  if (relpath != '') relpath += '/';
+</script>
+
+  <script type="text/javascript" charset="utf-8" src="../js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="../js/app.js"></script>
+
+
+  </head>
+  <body>
+    <script type="text/javascript" charset="utf-8">
+      if (window.top.frames.main) document.body.className = 'frames';
+    </script>
+    
+    <div id="header">
+      <div id="menu">
+  
+    <a href="../_index.html">Index (A)</a> &raquo; 
+    <span class='title'><span class='object_link'><a href="../LastFM.html" title="LastFM (module)">LastFM</a></span></span>
+     &raquo; 
+    <span class="title">Artist</span>
+  
+  
+  <div class="noframes"><span class="title">(</span><a href="." target="_top">no frames</a><span class="title">)</span></div>
+</div>
+
+      <div id="search">
+  
+    <a id="class_list_link" href="#">Class List</a>
+  
+    <a id="method_list_link" href="#">Method List</a>
+  
+    <a id="file_list_link" href="#">File List</a>
+  
+</div>
+      <div class="clear"></div>
+    </div>
+    
+    <iframe id="search_frame"></iframe>
+    
+    <div id="content"><h1>Class: LastFM::Artist
+  
+  
+  
+</h1>
+
+<dl class="box">
+  
+    <dt class="r1">Inherits:</dt>
+    <dd class="r1">
+      <span class="inheritName">Object</span>
+      
+        <ul class="fullTree">
+          <li>Object</li>
+          
+            <li class="next">LastFM::Artist</li>
+          
+        </ul>
+        <a href="#" class="inheritanceTree">show all</a>
+      
+      </dd>
+    
+  
+  
+    
+  
+    
+  
+  
+  
+    <dt class="r2 last">Defined in:</dt>
+    <dd class="r2 last">app/controller/lastfm/artist.rb</dd>
+  
+</dl>
+<div class="clear"></div>
+
+
+  <h2>Constant Summary</h2>
+  
+    <dl class="constants">
+      
+        <dt id="TYPE-constant" class="">TYPE =
+          
+        </dt>
+        <dd><pre class="code"><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>artist</span><span class='tstring_end'>'</span></span></pre></dd>
+      
+    </dl>
+  
+
+
+
+
+
+  
+    <h2>
+      Class Method Summary
+      <small>(<a href="#" class="summary_toggle">collapse</a>)</small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#add_tags-class_method" title="add_tags (class method)">+ (Object) <strong>add_tags</strong>(artist, tags) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+see: <a
+href="http://www.last.fm/api/show/?service=303">www.last.fm/api/show/?service=303</a>.
+</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#get_correction-class_method" title="get_correction (class method)">+ (Object) <strong>get_correction</strong>(artist) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+see: <a
+href="http://www.last.fm/api/show/?service=446">www.last.fm/api/show/?service=446</a>.
+</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#get_events-class_method" title="get_events (class method)">+ (Object) <strong>get_events</strong>(artist = nil, mbid = nil, autocorrect = nil, festivals_only = nil, limit = nil, page = nil) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+see: <a
+href="http://www.last.fm/api/show/?service=117">www.last.fm/api/show/?service=117</a>.
+</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#get_images-class_method" title="get_images (class method)">+ (Object) <strong>get_images</strong>(artist = nil, mbid = nil, autocorrect = nil, order = nil, limit = nil, page = nil) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+see: <a
+href="http://www.last.fm/api/show/?service=407">www.last.fm/api/show/?service=407</a>.
+</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#get_info-class_method" title="get_info (class method)">+ (Object) <strong>get_info</strong>(artist = nil, mbid = nil, lang = nil, autocorrect = nil, username = nil) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+see: <a
+href="http://www.last.fm/api/show/?service=267">www.last.fm/api/show/?service=267</a>.
+</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#get_past_events-class_method" title="get_past_events (class method)">+ (Object) <strong>get_past_events</strong>(artist = nil, mbid = nil, autocorrect = nil, limit = nil, page = nil) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+see: <a
+href="http://www.last.fm/api/show/?service=428">www.last.fm/api/show/?service=428</a>.
+</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#get_podcast-class_method" title="get_podcast (class method)">+ (Object) <strong>get_podcast</strong>(artist = nil, mbid = nil, autocorrect = nil) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+see: <a
+href="http://www.last.fm/api/show/?service=118">www.last.fm/api/show/?service=118</a>.
+</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#get_shouts-class_method" title="get_shouts (class method)">+ (Object) <strong>get_shouts</strong>(artist = nil, mbid = nil, autocorrect = nil, limit = nil, page = nil) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+see: <a
+href="http://www.last.fm/api/show/?service=397">www.last.fm/api/show/?service=397</a>.
+</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#get_similar-class_method" title="get_similar (class method)">+ (Object) <strong>get_similar</strong>(artist = nil, mbid = nil, autocorrect = nil, limit = nil) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+see: <a
+href="http://www.last.fm/api/show/?service=119">www.last.fm/api/show/?service=119</a>.
+</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#get_tags-class_method" title="get_tags (class method)">+ (Object) <strong>get_tags</strong>(artist = nil, mbid = nil, autocorrect = nil) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+see: <a
+href="http://www.last.fm/api/show/?service=318">www.last.fm/api/show/?service=318</a>.
+</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#get_top_albums-class_method" title="get_top_albums (class method)">+ (Object) <strong>get_top_albums</strong>(artist = nil, mbid = nil, autocorrect = nil, limit = nil, page = nil) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+see: <a
+href="http://www.last.fm/api/show/?service=287">www.last.fm/api/show/?service=287</a>.
+</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#get_top_fans-class_method" title="get_top_fans (class method)">+ (Object) <strong>get_top_fans</strong>(artist = nil, mbid = nil, autocorrect = nil) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+see: <a
+href="http://www.last.fm/api/show/?service=310">www.last.fm/api/show/?service=310</a>.
+</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#get_top_tags-class_method" title="get_top_tags (class method)">+ (Object) <strong>get_top_tags</strong>(artist = nil, mbid = nil, autocorrect = nil) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+see: <a
+href="http://www.last.fm/api/show/?service=288">www.last.fm/api/show/?service=288</a>.
+</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#get_top_tracks-class_method" title="get_top_tracks (class method)">+ (Object) <strong>get_top_tracks</strong>(artist = nil, mbid = nil, autocorrect = nil, limit = nil, page = nil) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+see: <a
+href="http://www.last.fm/api/show/?service=277">www.last.fm/api/show/?service=277</a>.
+</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#remove_tag-class_method" title="remove_tag (class method)">+ (Object) <strong>remove_tag</strong>(artist, tag) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+see: <a
+href="http://www.last.fm/api/show/?service=315">www.last.fm/api/show/?service=315</a>.
+</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#search-class_method" title="search (class method)">+ (Object) <strong>search</strong>(artist, limit = nil, page = nil) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+see: <a
+href="http://www.last.fm/api/show/?service=272">www.last.fm/api/show/?service=272</a>.
+</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#share-class_method" title="share (class method)">+ (Object) <strong>share</strong>(artist, recipient, message = nil, publicize = nil) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+see: <a
+href="http://www.last.fm/api/show/?service=306">www.last.fm/api/show/?service=306</a>.
+</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#shout-class_method" title="shout (class method)">+ (Object) <strong>shout</strong>(artist, message) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+see: <a
+href="http://www.last.fm/api/show/?service=408">www.last.fm/api/show/?service=408</a>.
+</p>
+</div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
+
+
+  <div id="class_method_details" class="method_details_list">
+    <h2>Class Method Details</h2>
+    
+    
+      <div class="method_details first">
+  <p class="signature first" id="add_tags-class_method">
+  
+    + (<tt>Object</tt>) <strong>add_tags</strong>(artist, tags) 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+see: <a
+href="http://www.last.fm/api/show/?service=303">www.last.fm/api/show/?service=303</a>
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <h3>Raises:</h3>
+<ul class="raise">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>NotImplementedError</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+10
+11
+12
+13
+14</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/controller/lastfm/artist.rb', line 10</span>
+
+<span class='kw'>def</span> <span class='id add_tags'>add_tags</span><span class='lparen'>(</span> <span class='id artist'>artist</span><span class='comma'>,</span> <span class='id tags'>tags</span> <span class='rparen'>)</span>
+  <span class='const'>Services</span><span class='op'>::</span><span class='const'>LastFM</span><span class='period'>.</span><span class='id requires_authentication'>requires_authentication</span>
+  <span class='id raise'>raise</span> <span class='const'>NotImplementedError</span>
+  <span class='comment'># Requires HTTP POST
+</span><span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="get_correction-class_method">
+  
+    + (<tt>Object</tt>) <strong>get_correction</strong>(artist) 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+see: <a
+href="http://www.last.fm/api/show/?service=446">www.last.fm/api/show/?service=446</a>
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <h3>Raises:</h3>
+<ul class="raise">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>NotImplementedError</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+17
+18
+19</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/controller/lastfm/artist.rb', line 17</span>
+
+<span class='kw'>def</span> <span class='id get_correction'>get_correction</span><span class='lparen'>(</span> <span class='id artist'>artist</span> <span class='rparen'>)</span>
+  <span class='id raise'>raise</span> <span class='const'>NotImplementedError</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="get_events-class_method">
+  
+    + (<tt>Object</tt>) <strong>get_events</strong>(artist = nil, mbid = nil, autocorrect = nil, festivals_only = nil, limit = nil, page = nil) 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+see: <a
+href="http://www.last.fm/api/show/?service=117">www.last.fm/api/show/?service=117</a>
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <h3>Raises:</h3>
+<ul class="raise">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>ArgumentError</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+22
+23
+24
+25</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/controller/lastfm/artist.rb', line 22</span>
+
+<span class='kw'>def</span> <span class='id get_events'>get_events</span><span class='lparen'>(</span> <span class='id artist'>artist</span> <span class='op'>=</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='id mbid'>mbid</span> <span class='op'>=</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='id autocorrect'>autocorrect</span> <span class='op'>=</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='id festivals_only'>festivals_only</span> <span class='op'>=</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='id limit'>limit</span> <span class='op'>=</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='id page'>page</span> <span class='op'>=</span> <span class='kw'>nil</span><span class='rparen'>)</span>
+  <span class='id raise'>raise</span> <span class='const'>ArgumentError</span> <span class='kw'>unless</span> <span class='id artist'>artist</span> <span class='op'>||</span> <span class='id mbid'>mbid</span>
+  <span class='id raise'>raise</span> <span class='const'>NotImplementedError</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="get_images-class_method">
+  
+    + (<tt>Object</tt>) <strong>get_images</strong>(artist = nil, mbid = nil, autocorrect = nil, order = nil, limit = nil, page = nil) 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+see: <a
+href="http://www.last.fm/api/show/?service=407">www.last.fm/api/show/?service=407</a>
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <h3>Raises:</h3>
+<ul class="raise">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>ArgumentError</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+28
+29
+30
+31</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/controller/lastfm/artist.rb', line 28</span>
+
+<span class='kw'>def</span> <span class='id get_images'>get_images</span><span class='lparen'>(</span> <span class='id artist'>artist</span> <span class='op'>=</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='id mbid'>mbid</span> <span class='op'>=</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='id autocorrect'>autocorrect</span> <span class='op'>=</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='id order'>order</span> <span class='op'>=</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='id limit'>limit</span> <span class='op'>=</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='id page'>page</span> <span class='op'>=</span> <span class='kw'>nil</span> <span class='rparen'>)</span>
+  <span class='id raise'>raise</span> <span class='const'>ArgumentError</span> <span class='kw'>unless</span> <span class='id artist'>artist</span> <span class='op'>||</span> <span class='id mbid'>mbid</span>
+  <span class='id raise'>raise</span> <span class='const'>NotImplementedError</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="get_info-class_method">
+  
+    + (<tt>Object</tt>) <strong>get_info</strong>(artist = nil, mbid = nil, lang = nil, autocorrect = nil, username = nil) 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+see: <a
+href="http://www.last.fm/api/show/?service=267">www.last.fm/api/show/?service=267</a>
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <h3>Raises:</h3>
+<ul class="raise">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>ArgumentError</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/controller/lastfm/artist.rb', line 34</span>
+
+<span class='kw'>def</span> <span class='id get_info'>get_info</span><span class='lparen'>(</span> <span class='id artist'>artist</span> <span class='op'>=</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='id mbid'>mbid</span> <span class='op'>=</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='id lang'>lang</span> <span class='op'>=</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='id autocorrect'>autocorrect</span> <span class='op'>=</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='id username'>username</span> <span class='op'>=</span> <span class='kw'>nil</span> <span class='rparen'>)</span>
+  <span class='id raise'>raise</span> <span class='const'>ArgumentError</span> <span class='kw'>unless</span> <span class='id artist'>artist</span> <span class='op'>||</span> <span class='id mbid'>mbid</span>
+  <span class='id params'>params</span> <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span>
+  <span class='id params'>params</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>artist</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id artist'>artist</span> <span class='kw'>if</span> <span class='id artist'>artist</span>
+  <span class='id params'>params</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>mbid</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id mbid'>mbid</span> <span class='kw'>unless</span> <span class='id artist'>artist</span>
+  <span class='id params'>params</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>autocorrect</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>1</span><span class='tstring_end'>'</span></span> <span class='kw'>if</span> <span class='id autocorrect'>autocorrect</span>
+  <span class='id params'>params</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>lang</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id lang'>lang</span> <span class='kw'>if</span> <span class='id lang'>lang</span>
+  <span class='id params'>params</span><span class='lbracket'>[</span><span class='tstring'><span class='tstring_beg'>'</span><span class='tstring_content'>username</span><span class='tstring_end'>'</span></span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id username'>username</span> <span class='kw'>if</span> <span class='id username'>username</span>
+  <span class='const'>Services</span><span class='op'>::</span><span class='const'>LastFM</span><span class='period'>.</span><span class='id get'>get</span><span class='lparen'>(</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='const'>TYPE</span><span class='rbrace'>}</span><span class='tstring_content'>.getInfo</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='op'>!</span><span class='symbol'>:secure</span><span class='comma'>,</span> <span class='id params'>params</span> <span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="get_past_events-class_method">
+  
+    + (<tt>Object</tt>) <strong>get_past_events</strong>(artist = nil, mbid = nil, autocorrect = nil, limit = nil, page = nil) 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+see: <a
+href="http://www.last.fm/api/show/?service=428">www.last.fm/api/show/?service=428</a>
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <h3>Raises:</h3>
+<ul class="raise">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>ArgumentError</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+46
+47
+48
+49</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/controller/lastfm/artist.rb', line 46</span>
+
+<span class='kw'>def</span> <span class='id get_past_events'>get_past_events</span><span class='lparen'>(</span> <span class='id artist'>artist</span> <span class='op'>=</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='id mbid'>mbid</span> <span class='op'>=</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='id autocorrect'>autocorrect</span> <span class='op'>=</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='id limit'>limit</span> <span class='op'>=</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='id page'>page</span> <span class='op'>=</span> <span class='kw'>nil</span> <span class='rparen'>)</span>
+  <span class='id raise'>raise</span> <span class='const'>ArgumentError</span> <span class='kw'>unless</span> <span class='id artist'>artist</span> <span class='op'>||</span> <span class='id mbid'>mbid</span>
+  <span class='id raise'>raise</span> <span class='const'>NotImplementedError</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="get_podcast-class_method">
+  
+    + (<tt>Object</tt>) <strong>get_podcast</strong>(artist = nil, mbid = nil, autocorrect = nil) 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+see: <a
+href="http://www.last.fm/api/show/?service=118">www.last.fm/api/show/?service=118</a>
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <h3>Raises:</h3>
+<ul class="raise">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>ArgumentError</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+52
+53
+54
+55</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/controller/lastfm/artist.rb', line 52</span>
+
+<span class='kw'>def</span> <span class='id get_podcast'>get_podcast</span><span class='lparen'>(</span> <span class='id artist'>artist</span> <span class='op'>=</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='id mbid'>mbid</span> <span class='op'>=</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='id autocorrect'>autocorrect</span> <span class='op'>=</span> <span class='kw'>nil</span> <span class='rparen'>)</span>
+  <span class='id raise'>raise</span> <span class='const'>ArgumentError</span> <span class='kw'>unless</span> <span class='id artist'>artist</span> <span class='op'>||</span> <span class='id mbid'>mbid</span>
+  <span class='id raise'>raise</span> <span class='const'>NotImplementedError</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="get_shouts-class_method">
+  
+    + (<tt>Object</tt>) <strong>get_shouts</strong>(artist = nil, mbid = nil, autocorrect = nil, limit = nil, page = nil) 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+see: <a
+href="http://www.last.fm/api/show/?service=397">www.last.fm/api/show/?service=397</a>
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <h3>Raises:</h3>
+<ul class="raise">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>ArgumentError</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+58
+59
+60
+61</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/controller/lastfm/artist.rb', line 58</span>
+
+<span class='kw'>def</span> <span class='id get_shouts'>get_shouts</span><span class='lparen'>(</span> <span class='id artist'>artist</span> <span class='op'>=</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='id mbid'>mbid</span> <span class='op'>=</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='id autocorrect'>autocorrect</span> <span class='op'>=</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='id limit'>limit</span> <span class='op'>=</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='id page'>page</span> <span class='op'>=</span> <span class='kw'>nil</span> <span class='rparen'>)</span>
+  <span class='id raise'>raise</span> <span class='const'>ArgumentError</span> <span class='kw'>unless</span> <span class='id artist'>artist</span> <span class='op'>||</span> <span class='id mbid'>mbid</span>
+  <span class='id raise'>raise</span> <span class='const'>NotImplementedError</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="get_similar-class_method">
+  
+    + (<tt>Object</tt>) <strong>get_similar</strong>(artist = nil, mbid = nil, autocorrect = nil, limit = nil) 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+see: <a
+href="http://www.last.fm/api/show/?service=119">www.last.fm/api/show/?service=119</a>
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <h3>Raises:</h3>
+<ul class="raise">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>ArgumentError</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+64
+65
+66
+67</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/controller/lastfm/artist.rb', line 64</span>
+
+<span class='kw'>def</span> <span class='id get_similar'>get_similar</span><span class='lparen'>(</span> <span class='id artist'>artist</span> <span class='op'>=</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='id mbid'>mbid</span> <span class='op'>=</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='id autocorrect'>autocorrect</span> <span class='op'>=</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='id limit'>limit</span> <span class='op'>=</span> <span class='kw'>nil</span> <span class='rparen'>)</span>
+  <span class='id raise'>raise</span> <span class='const'>ArgumentError</span> <span class='kw'>unless</span> <span class='id artist'>artist</span> <span class='op'>||</span> <span class='id mbid'>mbid</span>
+  <span class='id raise'>raise</span> <span class='const'>NotImplementedError</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="get_tags-class_method">
+  
+    + (<tt>Object</tt>) <strong>get_tags</strong>(artist = nil, mbid = nil, autocorrect = nil) 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+see: <a
+href="http://www.last.fm/api/show/?service=318">www.last.fm/api/show/?service=318</a>
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <h3>Raises:</h3>
+<ul class="raise">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>ArgumentError</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+70
+71
+72
+73
+74</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/controller/lastfm/artist.rb', line 70</span>
+
+<span class='kw'>def</span> <span class='id get_tags'>get_tags</span><span class='lparen'>(</span> <span class='id artist'>artist</span> <span class='op'>=</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='id mbid'>mbid</span> <span class='op'>=</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='id autocorrect'>autocorrect</span> <span class='op'>=</span> <span class='kw'>nil</span> <span class='rparen'>)</span>
+  <span class='id raise'>raise</span> <span class='const'>ArgumentError</span> <span class='kw'>unless</span> <span class='id artist'>artist</span> <span class='op'>||</span> <span class='id mbid'>mbid</span>
+  <span class='const'>Services</span><span class='op'>::</span><span class='const'>LastFM</span><span class='period'>.</span><span class='id requires_authentication'>requires_authentication</span>
+  <span class='id raise'>raise</span> <span class='const'>NotImplementedError</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="get_top_albums-class_method">
+  
+    + (<tt>Object</tt>) <strong>get_top_albums</strong>(artist = nil, mbid = nil, autocorrect = nil, limit = nil, page = nil) 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+see: <a
+href="http://www.last.fm/api/show/?service=287">www.last.fm/api/show/?service=287</a>
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <h3>Raises:</h3>
+<ul class="raise">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>ArgumentError</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+77
+78
+79
+80</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/controller/lastfm/artist.rb', line 77</span>
+
+<span class='kw'>def</span> <span class='id get_top_albums'>get_top_albums</span><span class='lparen'>(</span> <span class='id artist'>artist</span> <span class='op'>=</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='id mbid'>mbid</span> <span class='op'>=</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='id autocorrect'>autocorrect</span> <span class='op'>=</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='id limit'>limit</span> <span class='op'>=</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='id page'>page</span> <span class='op'>=</span> <span class='kw'>nil</span> <span class='rparen'>)</span>
+  <span class='id raise'>raise</span> <span class='const'>ArgumentError</span> <span class='kw'>unless</span> <span class='id artist'>artist</span> <span class='op'>||</span> <span class='id mbid'>mbid</span>
+  <span class='id raise'>raise</span> <span class='const'>NotImplementedError</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="get_top_fans-class_method">
+  
+    + (<tt>Object</tt>) <strong>get_top_fans</strong>(artist = nil, mbid = nil, autocorrect = nil) 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+see: <a
+href="http://www.last.fm/api/show/?service=310">www.last.fm/api/show/?service=310</a>
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <h3>Raises:</h3>
+<ul class="raise">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>ArgumentError</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+83
+84
+85
+86</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/controller/lastfm/artist.rb', line 83</span>
+
+<span class='kw'>def</span> <span class='id get_top_fans'>get_top_fans</span><span class='lparen'>(</span> <span class='id artist'>artist</span> <span class='op'>=</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='id mbid'>mbid</span> <span class='op'>=</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='id autocorrect'>autocorrect</span> <span class='op'>=</span> <span class='kw'>nil</span> <span class='rparen'>)</span>
+  <span class='id raise'>raise</span> <span class='const'>ArgumentError</span> <span class='kw'>unless</span> <span class='id artist'>artist</span> <span class='op'>||</span> <span class='id mbid'>mbid</span>
+  <span class='id raise'>raise</span> <span class='const'>NotImplementedError</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="get_top_tags-class_method">
+  
+    + (<tt>Object</tt>) <strong>get_top_tags</strong>(artist = nil, mbid = nil, autocorrect = nil) 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+see: <a
+href="http://www.last.fm/api/show/?service=288">www.last.fm/api/show/?service=288</a>
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <h3>Raises:</h3>
+<ul class="raise">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>ArgumentError</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+89
+90
+91
+92</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/controller/lastfm/artist.rb', line 89</span>
+
+<span class='kw'>def</span> <span class='id get_top_tags'>get_top_tags</span><span class='lparen'>(</span> <span class='id artist'>artist</span> <span class='op'>=</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='id mbid'>mbid</span> <span class='op'>=</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='id autocorrect'>autocorrect</span> <span class='op'>=</span> <span class='kw'>nil</span> <span class='rparen'>)</span>
+  <span class='id raise'>raise</span> <span class='const'>ArgumentError</span> <span class='kw'>unless</span> <span class='id artist'>artist</span> <span class='op'>||</span> <span class='id mbid'>mbid</span>
+  <span class='id raise'>raise</span> <span class='const'>NotImplementedError</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="get_top_tracks-class_method">
+  
+    + (<tt>Object</tt>) <strong>get_top_tracks</strong>(artist = nil, mbid = nil, autocorrect = nil, limit = nil, page = nil) 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+see: <a
+href="http://www.last.fm/api/show/?service=277">www.last.fm/api/show/?service=277</a>
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <h3>Raises:</h3>
+<ul class="raise">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>ArgumentError</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+95
+96
+97
+98</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/controller/lastfm/artist.rb', line 95</span>
+
+<span class='kw'>def</span> <span class='id get_top_tracks'>get_top_tracks</span><span class='lparen'>(</span> <span class='id artist'>artist</span> <span class='op'>=</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='id mbid'>mbid</span> <span class='op'>=</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='id autocorrect'>autocorrect</span> <span class='op'>=</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='id limit'>limit</span> <span class='op'>=</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='id page'>page</span> <span class='op'>=</span> <span class='kw'>nil</span> <span class='rparen'>)</span>
+  <span class='id raise'>raise</span> <span class='const'>ArgumentError</span> <span class='kw'>unless</span> <span class='id artist'>artist</span> <span class='op'>||</span> <span class='id mbid'>mbid</span>
+  <span class='id raise'>raise</span> <span class='const'>NotImplementedError</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="remove_tag-class_method">
+  
+    + (<tt>Object</tt>) <strong>remove_tag</strong>(artist, tag) 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+see: <a
+href="http://www.last.fm/api/show/?service=315">www.last.fm/api/show/?service=315</a>
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <h3>Raises:</h3>
+<ul class="raise">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>NotImplementedError</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+101
+102
+103
+104</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/controller/lastfm/artist.rb', line 101</span>
+
+<span class='kw'>def</span> <span class='id remove_tag'>remove_tag</span><span class='lparen'>(</span> <span class='id artist'>artist</span><span class='comma'>,</span> <span class='id tag'>tag</span> <span class='rparen'>)</span>
+  <span class='const'>Services</span><span class='op'>::</span><span class='const'>LastFM</span><span class='period'>.</span><span class='id requires_authentication'>requires_authentication</span>
+  <span class='id raise'>raise</span> <span class='const'>NotImplementedError</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="search-class_method">
+  
+    + (<tt>Object</tt>) <strong>search</strong>(artist, limit = nil, page = nil) 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+see: <a
+href="http://www.last.fm/api/show/?service=272">www.last.fm/api/show/?service=272</a>
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <h3>Raises:</h3>
+<ul class="raise">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>NotImplementedError</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+107
+108
+109</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/controller/lastfm/artist.rb', line 107</span>
+
+<span class='kw'>def</span> <span class='id search'>search</span><span class='lparen'>(</span> <span class='id artist'>artist</span><span class='comma'>,</span> <span class='id limit'>limit</span> <span class='op'>=</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='id page'>page</span> <span class='op'>=</span> <span class='kw'>nil</span> <span class='rparen'>)</span>
+  <span class='id raise'>raise</span> <span class='const'>NotImplementedError</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="share-class_method">
+  
+    + (<tt>Object</tt>) <strong>share</strong>(artist, recipient, message = nil, publicize = nil) 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+see: <a
+href="http://www.last.fm/api/show/?service=306">www.last.fm/api/show/?service=306</a>
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <h3>Raises:</h3>
+<ul class="raise">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>NotImplementedError</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+112
+113
+114
+115</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/controller/lastfm/artist.rb', line 112</span>
+
+<span class='kw'>def</span> <span class='id share'>share</span><span class='lparen'>(</span> <span class='id artist'>artist</span><span class='comma'>,</span> <span class='id recipient'>recipient</span><span class='comma'>,</span> <span class='id message'>message</span> <span class='op'>=</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='id publicize'>publicize</span> <span class='op'>=</span> <span class='kw'>nil</span> <span class='rparen'>)</span>
+  <span class='const'>Services</span><span class='op'>::</span><span class='const'>LastFM</span><span class='period'>.</span><span class='id requires_authentication'>requires_authentication</span>
+  <span class='id raise'>raise</span> <span class='const'>NotImplementedError</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="shout-class_method">
+  
+    + (<tt>Object</tt>) <strong>shout</strong>(artist, message) 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+see: <a
+href="http://www.last.fm/api/show/?service=408">www.last.fm/api/show/?service=408</a>
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <h3>Raises:</h3>
+<ul class="raise">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>NotImplementedError</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+118
+119
+120
+121</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/controller/lastfm/artist.rb', line 118</span>
+
+<span class='kw'>def</span> <span class='id shout'>shout</span><span class='lparen'>(</span> <span class='id artist'>artist</span><span class='comma'>,</span> <span class='id message'>message</span> <span class='rparen'>)</span>
+  <span class='const'>Services</span><span class='op'>::</span><span class='const'>LastFM</span><span class='period'>.</span><span class='id requires_authentication'>requires_authentication</span>
+  <span class='id raise'>raise</span> <span class='const'>NotImplementedError</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+</div>
+    
+    <div id="footer">
+  Generated on Fri Aug  5 17:07:13 2011 by 
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.7.2 (ruby-1.9.2).
+</div>
+
+  </body>
+</html>

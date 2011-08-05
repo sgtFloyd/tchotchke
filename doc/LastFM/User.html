@@ -1,0 +1,1726 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>
+  Class: LastFM::User
+  
+    &mdash; Documentation by YARD 0.7.2
+  
+</title>
+
+  <link rel="stylesheet" href="../css/style.css" type="text/css" media="screen" charset="utf-8" />
+
+  <link rel="stylesheet" href="../css/common.css" type="text/css" media="screen" charset="utf-8" />
+
+<script type="text/javascript" charset="utf-8">
+  relpath = '..';
+  if (relpath != '') relpath += '/';
+</script>
+
+  <script type="text/javascript" charset="utf-8" src="../js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="../js/app.js"></script>
+
+
+  </head>
+  <body>
+    <script type="text/javascript" charset="utf-8">
+      if (window.top.frames.main) document.body.className = 'frames';
+    </script>
+    
+    <div id="header">
+      <div id="menu">
+  
+    <a href="../_index.html">Index (U)</a> &raquo; 
+    <span class='title'><span class='object_link'><a href="../LastFM.html" title="LastFM (module)">LastFM</a></span></span>
+     &raquo; 
+    <span class="title">User</span>
+  
+  
+  <div class="noframes"><span class="title">(</span><a href="." target="_top">no frames</a><span class="title">)</span></div>
+</div>
+
+      <div id="search">
+  
+    <a id="class_list_link" href="#">Class List</a>
+  
+    <a id="method_list_link" href="#">Method List</a>
+  
+    <a id="file_list_link" href="#">File List</a>
+  
+</div>
+      <div class="clear"></div>
+    </div>
+    
+    <iframe id="search_frame"></iframe>
+    
+    <div id="content"><h1>Class: LastFM::User
+  
+  
+  
+</h1>
+
+<dl class="box">
+  
+    <dt class="r1">Inherits:</dt>
+    <dd class="r1">
+      <span class="inheritName">Object</span>
+      
+        <ul class="fullTree">
+          <li>Object</li>
+          
+            <li class="next">LastFM::User</li>
+          
+        </ul>
+        <a href="#" class="inheritanceTree">show all</a>
+      
+      </dd>
+    
+  
+  
+    
+  
+    
+  
+  
+  
+    <dt class="r2 last">Defined in:</dt>
+    <dd class="r2 last">app/controller/lastfm/user.rb</dd>
+  
+</dl>
+<div class="clear"></div>
+
+
+
+
+
+
+  
+    <h2>
+      Class Method Summary
+      <small>(<a href="#" class="summary_toggle">collapse</a>)</small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#get_artist_tracks-class_method" title="get_artist_tracks (class method)">+ (Object) <strong>get_artist_tracks</strong>(user, artist, start_timestamp = nil, end_timestamp = nil, page = nil) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+see: <a
+href="http://www.last.fm/api/show?service=432">www.last.fm/api/show?service=432</a>.
+</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#get_banned_tracks-class_method" title="get_banned_tracks (class method)">+ (Object) <strong>get_banned_tracks</strong>(user, limit = nil, page = nil) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+see: <a
+href="http://www.last.fm/api/show?service=448">www.last.fm/api/show?service=448</a>.
+</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#get_events-class_method" title="get_events (class method)">+ (Object) <strong>get_events</strong>(user, limit, page) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+see: <a
+href="http://www.last.fm/api/show?service=291">www.last.fm/api/show?service=291</a>.
+</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#get_friends-class_method" title="get_friends (class method)">+ (Object) <strong>get_friends</strong>(user, recent_tracks = nil, limit = nil, page = nil) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+see: <a
+href="http://www.last.fm/api/show?service=263">www.last.fm/api/show?service=263</a>.
+</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#get_info-class_method" title="get_info (class method)">+ (Object) <strong>get_info</strong>(user = nil) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+see: <a
+href="http://www.last.fm/api/show?service=344">www.last.fm/api/show?service=344</a>.
+</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#get_loved_tracks-class_method" title="get_loved_tracks (class method)">+ (Object) <strong>get_loved_tracks</strong>(user, limit = nil, page = nil) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+see: <a
+href="http://www.last.fm/api/show?service=329">www.last.fm/api/show?service=329</a>.
+</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#get_neighbors-class_method" title="get_neighbors (class method)">+ (Object) <strong>get_neighbors</strong>(user, limit = nil) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+see: <a
+href="http://www.last.fm/api/show?service=264">www.last.fm/api/show?service=264</a>.
+</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#get_new_releases-class_method" title="get_new_releases (class method)">+ (Object) <strong>get_new_releases</strong>(user, useresc = nil) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+see: <a
+href="http://www.last.fm/api/show?service=444">www.last.fm/api/show?service=444</a>.
+</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#get_past_events-class_method" title="get_past_events (class method)">+ (Object) <strong>get_past_events</strong>(user, limit = nil, page = nil) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+see: <a
+href="http://www.last.fm/api/show?service=343">www.last.fm/api/show?service=343</a>.
+</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#get_personal_tags-class_method" title="get_personal_tags (class method)">+ (Object) <strong>get_personal_tags</strong>(user, tag, tagging_type, limit = nil, page = nil) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+see: <a
+href="http://www.last.fm/api/show?service=455">www.last.fm/api/show?service=455</a>.
+</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#get_playlists-class_method" title="get_playlists (class method)">+ (Object) <strong>get_playlists</strong>(user) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+see: <a
+href="http://www.last.fm/api/show?service=313">www.last.fm/api/show?service=313</a>.
+</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#get_recent_stations-class_method" title="get_recent_stations (class method)">+ (Object) <strong>get_recent_stations</strong>(user, limit = nil, page = nil) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+see: <a
+href="http://www.last.fm/api/show?service=414">www.last.fm/api/show?service=414</a>.
+</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#get_recent_tracks-class_method" title="get_recent_tracks (class method)">+ (Object) <strong>get_recent_tracks</strong>(user, time_start = nil, time_end = nil, limit = nil, page = nil) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+see: <a
+href="http://www.last.fm/api/show?service=278">www.last.fm/api/show?service=278</a>.
+</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#get_recommended_artists-class_method" title="get_recommended_artists (class method)">+ (Object) <strong>get_recommended_artists</strong>(limit = nil, page = nil) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+see: <a
+href="http://www.last.fm/api/show?service=388">www.last.fm/api/show?service=388</a>.
+</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#get_recommended_events-class_method" title="get_recommended_events (class method)">+ (Object) <strong>get_recommended_events</strong>(limit = nil, page = nil) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+see: <a
+href="http://www.last.fm/api/show?service=375">www.last.fm/api/show?service=375</a>.
+</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#get_shouts-class_method" title="get_shouts (class method)">+ (Object) <strong>get_shouts</strong>(user, limit = nil, page = nil) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+see: <a
+href="http://www.last.fm/api/show?service=401">www.last.fm/api/show?service=401</a>.
+</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#get_top_albums-class_method" title="get_top_albums (class method)">+ (Object) <strong>get_top_albums</strong>(user, period = nil, limit = nil, page = nil) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+see: <a
+href="http://www.last.fm/api/show?service=299">www.last.fm/api/show?service=299</a>.
+</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#get_top_artists-class_method" title="get_top_artists (class method)">+ (Object) <strong>get_top_artists</strong>(user, period = nil, limit = nil, page = nil) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+see: <a
+href="http://www.last.fm/api/show?service=300">www.last.fm/api/show?service=300</a>.
+</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#get_top_tags-class_method" title="get_top_tags (class method)">+ (Object) <strong>get_top_tags</strong>(user, limit = nil) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+see: <a
+href="http://www.last.fm/api/show?service=123">www.last.fm/api/show?service=123</a>.
+</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#get_top_tracks-class_method" title="get_top_tracks (class method)">+ (Object) <strong>get_top_tracks</strong>(user, period, limit = nil, page = nil) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+see: <a
+href="http://www.last.fm/api/show?service=301">www.last.fm/api/show?service=301</a>.
+</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#get_weekly_album_chart-class_method" title="get_weekly_album_chart (class method)">+ (Object) <strong>get_weekly_album_chart</strong>(user, time_start = nil, time_end = nil) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+see: <a
+href="http://www.last.fm/api/show?service=279">www.last.fm/api/show?service=279</a>.
+</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#get_weekly_artist_chart-class_method" title="get_weekly_artist_chart (class method)">+ (Object) <strong>get_weekly_artist_chart</strong>(user, time_start = nil, time_end = nil) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+see: <a
+href="http://www.last.fm/api/show?service=281">www.last.fm/api/show?service=281</a>.
+</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#get_weekly_chart_list-class_method" title="get_weekly_chart_list (class method)">+ (Object) <strong>get_weekly_chart_list</strong>(user) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+see: <a
+href="http://www.last.fm/api/show?service=280">www.last.fm/api/show?service=280</a>.
+</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#get_weekly_track_chart-class_method" title="get_weekly_track_chart (class method)">+ (Object) <strong>get_weekly_track_chart</strong>(user, time_start = nil, time_end = nil) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+see: <a
+href="http://www.last.fm/api/show?service=282">www.last.fm/api/show?service=282</a>.
+</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#shout-class_method" title="shout (class method)">+ (Object) <strong>shout</strong>(user, message) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'><p>
+see: <a
+href="http://www.last.fm/api/show?service=411">www.last.fm/api/show?service=411</a>.
+</p>
+</div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
+
+
+  <div id="class_method_details" class="method_details_list">
+    <h2>Class Method Details</h2>
+    
+    
+      <div class="method_details first">
+  <p class="signature first" id="get_artist_tracks-class_method">
+  
+    + (<tt>Object</tt>) <strong>get_artist_tracks</strong>(user, artist, start_timestamp = nil, end_timestamp = nil, page = nil) 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+see: <a
+href="http://www.last.fm/api/show?service=432">www.last.fm/api/show?service=432</a>
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+8
+9</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/controller/lastfm/user.rb', line 8</span>
+
+<span class='kw'>def</span> <span class='id get_artist_tracks'>get_artist_tracks</span><span class='lparen'>(</span> <span class='id user'>user</span><span class='comma'>,</span> <span class='id artist'>artist</span><span class='comma'>,</span> <span class='id start_timestamp'>start_timestamp</span> <span class='op'>=</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='id end_timestamp'>end_timestamp</span> <span class='op'>=</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='id page'>page</span> <span class='op'>=</span> <span class='kw'>nil</span> <span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="get_banned_tracks-class_method">
+  
+    + (<tt>Object</tt>) <strong>get_banned_tracks</strong>(user, limit = nil, page = nil) 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+see: <a
+href="http://www.last.fm/api/show?service=448">www.last.fm/api/show?service=448</a>
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+12
+13</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/controller/lastfm/user.rb', line 12</span>
+
+<span class='kw'>def</span> <span class='id get_banned_tracks'>get_banned_tracks</span><span class='lparen'>(</span> <span class='id user'>user</span><span class='comma'>,</span> <span class='id limit'>limit</span> <span class='op'>=</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='id page'>page</span> <span class='op'>=</span> <span class='kw'>nil</span> <span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="get_events-class_method">
+  
+    + (<tt>Object</tt>) <strong>get_events</strong>(user, limit, page) 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+see: <a
+href="http://www.last.fm/api/show?service=291">www.last.fm/api/show?service=291</a>
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+16
+17</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/controller/lastfm/user.rb', line 16</span>
+
+<span class='kw'>def</span> <span class='id get_events'>get_events</span><span class='lparen'>(</span> <span class='id user'>user</span><span class='comma'>,</span> <span class='id limit'>limit</span><span class='comma'>,</span> <span class='id page'>page</span> <span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="get_friends-class_method">
+  
+    + (<tt>Object</tt>) <strong>get_friends</strong>(user, recent_tracks = nil, limit = nil, page = nil) 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+see: <a
+href="http://www.last.fm/api/show?service=263">www.last.fm/api/show?service=263</a>
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+20
+21</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/controller/lastfm/user.rb', line 20</span>
+
+<span class='kw'>def</span> <span class='id get_friends'>get_friends</span><span class='lparen'>(</span> <span class='id user'>user</span><span class='comma'>,</span> <span class='id recent_tracks'>recent_tracks</span> <span class='op'>=</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='id limit'>limit</span> <span class='op'>=</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='id page'>page</span> <span class='op'>=</span> <span class='kw'>nil</span> <span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="get_info-class_method">
+  
+    + (<tt>Object</tt>) <strong>get_info</strong>(user = nil) 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+see: <a
+href="http://www.last.fm/api/show?service=344">www.last.fm/api/show?service=344</a>
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+24
+25</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/controller/lastfm/user.rb', line 24</span>
+
+<span class='kw'>def</span> <span class='id get_info'>get_info</span><span class='lparen'>(</span> <span class='id user'>user</span> <span class='op'>=</span> <span class='kw'>nil</span> <span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="get_loved_tracks-class_method">
+  
+    + (<tt>Object</tt>) <strong>get_loved_tracks</strong>(user, limit = nil, page = nil) 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+see: <a
+href="http://www.last.fm/api/show?service=329">www.last.fm/api/show?service=329</a>
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+28
+29</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/controller/lastfm/user.rb', line 28</span>
+
+<span class='kw'>def</span> <span class='id get_loved_tracks'>get_loved_tracks</span><span class='lparen'>(</span> <span class='id user'>user</span><span class='comma'>,</span> <span class='id limit'>limit</span> <span class='op'>=</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='id page'>page</span> <span class='op'>=</span> <span class='kw'>nil</span> <span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="get_neighbors-class_method">
+  
+    + (<tt>Object</tt>) <strong>get_neighbors</strong>(user, limit = nil) 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+see: <a
+href="http://www.last.fm/api/show?service=264">www.last.fm/api/show?service=264</a>
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+32
+33</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/controller/lastfm/user.rb', line 32</span>
+
+<span class='kw'>def</span> <span class='id get_neighbors'>get_neighbors</span><span class='lparen'>(</span> <span class='id user'>user</span><span class='comma'>,</span> <span class='id limit'>limit</span> <span class='op'>=</span> <span class='kw'>nil</span> <span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="get_new_releases-class_method">
+  
+    + (<tt>Object</tt>) <strong>get_new_releases</strong>(user, useresc = nil) 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+see: <a
+href="http://www.last.fm/api/show?service=444">www.last.fm/api/show?service=444</a>
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+36
+37</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/controller/lastfm/user.rb', line 36</span>
+
+<span class='kw'>def</span> <span class='id get_new_releases'>get_new_releases</span><span class='lparen'>(</span> <span class='id user'>user</span><span class='comma'>,</span> <span class='id useresc'>useresc</span> <span class='op'>=</span> <span class='kw'>nil</span> <span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="get_past_events-class_method">
+  
+    + (<tt>Object</tt>) <strong>get_past_events</strong>(user, limit = nil, page = nil) 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+see: <a
+href="http://www.last.fm/api/show?service=343">www.last.fm/api/show?service=343</a>
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+40
+41</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/controller/lastfm/user.rb', line 40</span>
+
+<span class='kw'>def</span> <span class='id get_past_events'>get_past_events</span><span class='lparen'>(</span> <span class='id user'>user</span><span class='comma'>,</span> <span class='id limit'>limit</span> <span class='op'>=</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='id page'>page</span> <span class='op'>=</span> <span class='kw'>nil</span> <span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="get_personal_tags-class_method">
+  
+    + (<tt>Object</tt>) <strong>get_personal_tags</strong>(user, tag, tagging_type, limit = nil, page = nil) 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+see: <a
+href="http://www.last.fm/api/show?service=455">www.last.fm/api/show?service=455</a>
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  <h3>Raises:</h3>
+<ul class="raise">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>ArgumentError</tt>)</span>
+      
+      
+      
+    </li>
+  
+</ul>
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+46
+47
+48</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/controller/lastfm/user.rb', line 46</span>
+
+<span class='kw'>def</span> <span class='id get_personal_tags'>get_personal_tags</span><span class='lparen'>(</span> <span class='id user'>user</span><span class='comma'>,</span> <span class='id tag'>tag</span><span class='comma'>,</span> <span class='id tagging_type'>tagging_type</span><span class='comma'>,</span> <span class='id limit'>limit</span> <span class='op'>=</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='id page'>page</span> <span class='op'>=</span> <span class='kw'>nil</span> <span class='rparen'>)</span>
+  <span class='id raise'>raise</span> <span class='const'>ArgumentError</span> <span class='kw'>unless</span> <span class='ivar'>@tagging_types</span><span class='period'>.</span><span class='id include?'>include?</span><span class='lparen'>(</span><span class='id tagging_type'>tagging_type</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="get_playlists-class_method">
+  
+    + (<tt>Object</tt>) <strong>get_playlists</strong>(user) 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+see: <a
+href="http://www.last.fm/api/show?service=313">www.last.fm/api/show?service=313</a>
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+51
+52</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/controller/lastfm/user.rb', line 51</span>
+
+<span class='kw'>def</span> <span class='id get_playlists'>get_playlists</span><span class='lparen'>(</span> <span class='id user'>user</span> <span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="get_recent_stations-class_method">
+  
+    + (<tt>Object</tt>) <strong>get_recent_stations</strong>(user, limit = nil, page = nil) 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+see: <a
+href="http://www.last.fm/api/show?service=414">www.last.fm/api/show?service=414</a>
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+55
+56
+57</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/controller/lastfm/user.rb', line 55</span>
+
+<span class='kw'>def</span> <span class='id get_recent_stations'>get_recent_stations</span><span class='lparen'>(</span> <span class='id user'>user</span><span class='comma'>,</span> <span class='id limit'>limit</span> <span class='op'>=</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='id page'>page</span> <span class='op'>=</span> <span class='kw'>nil</span> <span class='rparen'>)</span>
+  <span class='const'>Services</span><span class='op'>::</span><span class='const'>LastFM</span><span class='period'>.</span><span class='id requires_authentication'>requires_authentication</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="get_recent_tracks-class_method">
+  
+    + (<tt>Object</tt>) <strong>get_recent_tracks</strong>(user, time_start = nil, time_end = nil, limit = nil, page = nil) 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+see: <a
+href="http://www.last.fm/api/show?service=278">www.last.fm/api/show?service=278</a>
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+60
+61</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/controller/lastfm/user.rb', line 60</span>
+
+<span class='kw'>def</span> <span class='id get_recent_tracks'>get_recent_tracks</span><span class='lparen'>(</span> <span class='id user'>user</span><span class='comma'>,</span> <span class='id time_start'>time_start</span> <span class='op'>=</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='id time_end'>time_end</span> <span class='op'>=</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='id limit'>limit</span> <span class='op'>=</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='id page'>page</span> <span class='op'>=</span> <span class='kw'>nil</span> <span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="get_recommended_artists-class_method">
+  
+    + (<tt>Object</tt>) <strong>get_recommended_artists</strong>(limit = nil, page = nil) 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+see: <a
+href="http://www.last.fm/api/show?service=388">www.last.fm/api/show?service=388</a>
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+64
+65
+66</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/controller/lastfm/user.rb', line 64</span>
+
+<span class='kw'>def</span> <span class='id get_recommended_artists'>get_recommended_artists</span><span class='lparen'>(</span> <span class='id limit'>limit</span> <span class='op'>=</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='id page'>page</span> <span class='op'>=</span> <span class='kw'>nil</span> <span class='rparen'>)</span>
+  <span class='const'>Services</span><span class='op'>::</span><span class='const'>LastFM</span><span class='period'>.</span><span class='id requires_authentication'>requires_authentication</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="get_recommended_events-class_method">
+  
+    + (<tt>Object</tt>) <strong>get_recommended_events</strong>(limit = nil, page = nil) 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+see: <a
+href="http://www.last.fm/api/show?service=375">www.last.fm/api/show?service=375</a>
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+69
+70
+71</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/controller/lastfm/user.rb', line 69</span>
+
+<span class='kw'>def</span> <span class='id get_recommended_events'>get_recommended_events</span><span class='lparen'>(</span> <span class='id limit'>limit</span> <span class='op'>=</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='id page'>page</span> <span class='op'>=</span> <span class='kw'>nil</span> <span class='rparen'>)</span>
+  <span class='const'>Services</span><span class='op'>::</span><span class='const'>LastFM</span><span class='period'>.</span><span class='id requires_authentication'>requires_authentication</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="get_shouts-class_method">
+  
+    + (<tt>Object</tt>) <strong>get_shouts</strong>(user, limit = nil, page = nil) 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+see: <a
+href="http://www.last.fm/api/show?service=401">www.last.fm/api/show?service=401</a>
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+74
+75</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/controller/lastfm/user.rb', line 74</span>
+
+<span class='kw'>def</span> <span class='id get_shouts'>get_shouts</span><span class='lparen'>(</span> <span class='id user'>user</span><span class='comma'>,</span> <span class='id limit'>limit</span> <span class='op'>=</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='id page'>page</span> <span class='op'>=</span> <span class='kw'>nil</span> <span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="get_top_albums-class_method">
+  
+    + (<tt>Object</tt>) <strong>get_top_albums</strong>(user, period = nil, limit = nil, page = nil) 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+see: <a
+href="http://www.last.fm/api/show?service=299">www.last.fm/api/show?service=299</a>
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+78
+79</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/controller/lastfm/user.rb', line 78</span>
+
+<span class='kw'>def</span> <span class='id get_top_albums'>get_top_albums</span><span class='lparen'>(</span> <span class='id user'>user</span><span class='comma'>,</span> <span class='id period'>period</span> <span class='op'>=</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='id limit'>limit</span> <span class='op'>=</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='id page'>page</span> <span class='op'>=</span> <span class='kw'>nil</span> <span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="get_top_artists-class_method">
+  
+    + (<tt>Object</tt>) <strong>get_top_artists</strong>(user, period = nil, limit = nil, page = nil) 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+see: <a
+href="http://www.last.fm/api/show?service=300">www.last.fm/api/show?service=300</a>
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+82
+83</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/controller/lastfm/user.rb', line 82</span>
+
+<span class='kw'>def</span> <span class='id get_top_artists'>get_top_artists</span><span class='lparen'>(</span> <span class='id user'>user</span><span class='comma'>,</span> <span class='id period'>period</span> <span class='op'>=</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='id limit'>limit</span> <span class='op'>=</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='id page'>page</span> <span class='op'>=</span> <span class='kw'>nil</span> <span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="get_top_tags-class_method">
+  
+    + (<tt>Object</tt>) <strong>get_top_tags</strong>(user, limit = nil) 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+see: <a
+href="http://www.last.fm/api/show?service=123">www.last.fm/api/show?service=123</a>
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+86
+87</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/controller/lastfm/user.rb', line 86</span>
+
+<span class='kw'>def</span> <span class='id get_top_tags'>get_top_tags</span><span class='lparen'>(</span> <span class='id user'>user</span><span class='comma'>,</span> <span class='id limit'>limit</span> <span class='op'>=</span> <span class='kw'>nil</span> <span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="get_top_tracks-class_method">
+  
+    + (<tt>Object</tt>) <strong>get_top_tracks</strong>(user, period, limit = nil, page = nil) 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+see: <a
+href="http://www.last.fm/api/show?service=301">www.last.fm/api/show?service=301</a>
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+90
+91</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/controller/lastfm/user.rb', line 90</span>
+
+<span class='kw'>def</span> <span class='id get_top_tracks'>get_top_tracks</span><span class='lparen'>(</span> <span class='id user'>user</span><span class='comma'>,</span> <span class='id period'>period</span><span class='comma'>,</span> <span class='id limit'>limit</span> <span class='op'>=</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='id page'>page</span> <span class='op'>=</span> <span class='kw'>nil</span> <span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="get_weekly_album_chart-class_method">
+  
+    + (<tt>Object</tt>) <strong>get_weekly_album_chart</strong>(user, time_start = nil, time_end = nil) 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+see: <a
+href="http://www.last.fm/api/show?service=279">www.last.fm/api/show?service=279</a>
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+94
+95</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/controller/lastfm/user.rb', line 94</span>
+
+<span class='kw'>def</span> <span class='id get_weekly_album_chart'>get_weekly_album_chart</span><span class='lparen'>(</span> <span class='id user'>user</span><span class='comma'>,</span> <span class='id time_start'>time_start</span> <span class='op'>=</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='id time_end'>time_end</span> <span class='op'>=</span> <span class='kw'>nil</span> <span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="get_weekly_artist_chart-class_method">
+  
+    + (<tt>Object</tt>) <strong>get_weekly_artist_chart</strong>(user, time_start = nil, time_end = nil) 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+see: <a
+href="http://www.last.fm/api/show?service=281">www.last.fm/api/show?service=281</a>
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+98
+99</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/controller/lastfm/user.rb', line 98</span>
+
+<span class='kw'>def</span> <span class='id get_weekly_artist_chart'>get_weekly_artist_chart</span><span class='lparen'>(</span> <span class='id user'>user</span><span class='comma'>,</span> <span class='id time_start'>time_start</span> <span class='op'>=</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='id time_end'>time_end</span> <span class='op'>=</span> <span class='kw'>nil</span> <span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="get_weekly_chart_list-class_method">
+  
+    + (<tt>Object</tt>) <strong>get_weekly_chart_list</strong>(user) 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+see: <a
+href="http://www.last.fm/api/show?service=280">www.last.fm/api/show?service=280</a>
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+102
+103</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/controller/lastfm/user.rb', line 102</span>
+
+<span class='kw'>def</span> <span class='id get_weekly_chart_list'>get_weekly_chart_list</span><span class='lparen'>(</span> <span class='id user'>user</span> <span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="get_weekly_track_chart-class_method">
+  
+    + (<tt>Object</tt>) <strong>get_weekly_track_chart</strong>(user, time_start = nil, time_end = nil) 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+see: <a
+href="http://www.last.fm/api/show?service=282">www.last.fm/api/show?service=282</a>
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+106
+107</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/controller/lastfm/user.rb', line 106</span>
+
+<span class='kw'>def</span> <span class='id get_weekly_track_chart'>get_weekly_track_chart</span><span class='lparen'>(</span> <span class='id user'>user</span><span class='comma'>,</span> <span class='id time_start'>time_start</span> <span class='op'>=</span> <span class='kw'>nil</span><span class='comma'>,</span> <span class='id time_end'>time_end</span> <span class='op'>=</span> <span class='kw'>nil</span> <span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <p class="signature " id="shout-class_method">
+  
+    + (<tt>Object</tt>) <strong>shout</strong>(user, message) 
+  
+
+  
+</p><div class="docstring">
+  <div class="discussion">
+    <p>
+see: <a
+href="http://www.last.fm/api/show?service=411">www.last.fm/api/show?service=411</a>
+</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+110
+111
+112</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'app/controller/lastfm/user.rb', line 110</span>
+
+<span class='kw'>def</span> <span class='id shout'>shout</span><span class='lparen'>(</span> <span class='id user'>user</span><span class='comma'>,</span> <span class='id message'>message</span> <span class='rparen'>)</span>
+  <span class='const'>Services</span><span class='op'>::</span><span class='const'>LastFM</span><span class='period'>.</span><span class='id requires_authentication'>requires_authentication</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+</div>
+    
+    <div id="footer">
+  Generated on Fri Aug  5 17:07:12 2011 by 
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.7.2 (ruby-1.9.2).
+</div>
+
+  </body>
+</html>

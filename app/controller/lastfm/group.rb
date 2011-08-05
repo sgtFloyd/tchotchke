@@ -18,6 +18,7 @@ module LastFM
     
       # see: http://www.last.fm/api/show/?service=294
       def get_weekly_artist_chart( group, date_from = nil, date_to = nil )
+      end
     
       # see: http://www.last.fm/api/show/?service=295
       def get_weekly_chart_list( group )

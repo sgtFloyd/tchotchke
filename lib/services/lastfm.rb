@@ -5,6 +5,7 @@ require 'yaml'
 
 require 'controller/lastfm/auth'
 
+# @author Gabe Smith
 module Services
   module LastFM
     class << self
@@ -53,7 +54,7 @@ module Services
       # @param [String] method  last.fm api method to call
       # @param [optional, Boolean] secure  whether sign the request with a method signature and session key
       #   (one exception being auth methods, which require a method signature but no session key)
-      # @param [Hash] params  parameters to send, excluding method, api_key, api_sig, and sk
+      # @param [Hash<Symbol, String>] params  parameters to send, excluding method, api_key, api_sig, and sk
       # @return [LibXML::XML::Document] xml document of the data contained in the response
       # @raise [LastFMError] if the request fails
       def get( method, secure = false, params = {} )
@@ -77,7 +78,7 @@ module Services
       # Load a property from a config file, or throw an error if it doesn't exist.
       #
       # @param [String] property  key of the property to get the value for
-      # @param [Hash] config  hash of yaml config file
+      # @param [Hash<String, String>] config  hash of yaml config file
       # @return [String] the value loaded from the config
       # @raise [ConfigurationError] if the property doesn't exist or isn't set within the file.
       # @private
