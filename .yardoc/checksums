@@ -1,7 +1,7 @@
 app/tchotchke.rb 636c120b6147262d28fe70c1e64395deacf685d9
 app/model/track.rb 22136fbc6c3ad35aaae0fe508c40c1cdced6d7a9
 app/model/album.rb 38a584cf59bdfd0deb8e92bc6ac60c52807de19c
-lib/services/lastfm.rb 26cae12866367e8e995d9099517801f0382650df
+lib/services/lastfm.rb 3a5149113fe9469c3c5c0084a66a1c99e5bb899e
 app/controller/lastfm/tag.rb 8690166f7b866e2366b6e886318d07c858a497fc
 app/controller/lastfm/geo.rb 3f49e9ceb4d35abb5b7c6628e4fb4e4bab63d303
 app/controller/lastfm/user.rb e4d4eaa5a99735c28e9b7032fa4d01f9b0a379fe
