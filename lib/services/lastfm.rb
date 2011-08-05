@@ -1,6 +1,6 @@
 require 'digest/md5'
+require 'libxml'
 require 'net/http'
-require 'xmlsimple'
 require 'yaml'
 
 require 'controller/lastfm/auth'
@@ -13,14 +13,10 @@ module Services
 
       HOST = 'ws.audioscrobbler.com'
 
-      # XmlSimple configuration options
-      FORCE_ARRAY = [ 'similar', 'tags' ]
-      KEY_ATTR = { 'image' => 'size' }
-
       # see: http://www.last.fm/api/authspec
       def authenticate!
         raise AuthenticationError, 'Missing authentication property.' unless @api_key && @api_secret && @username && @auth_token
-        @session_key ||= ::LastFM::Auth.get_mobile_session( @username, @auth_token )['session']['key']
+        @session_key ||= ::LastFM::Auth.get_mobile_session( @username, @auth_token ).find_first('session/key').content
       end
 
       def authenticated?
@@ -28,7 +24,7 @@ module Services
       end
 
       def load_config
-        config = YAML.load_file( $ROOT + "/config/lastfm.yml" )
+        config = YAML.load_file( "#{$ROOT}/config/lastfm.yml" )
         @api_key = load_config_property( config, 'api_key' )
         @api_secret = load_config_property( config, 'api_secret' )
         @username = load_config_property( config, 'login_username' )
@@ -39,24 +35,25 @@ module Services
         raise AuthenticationError, 'LastFM Authentication Required' unless authenticated?
       end
 
-      # Send an HTTP get request to Last.fm, and convert the XML response to a hash before returning
-      #   method: api method to call
-      #   secure: whether sign the request with a method signature and session key
-      #     (one exception being auth methods, which require a method signature but no session key
-      #   params: hash of parameters to send, excluding method, api_key, api_sig, and sk
+      # Construct full HTTP GET call from params, and load the response into a LibXML Document.
       #
-      #   returns: a hash structure of the data contained in the response
+      # @param method [String]  Last.fm api method to call
+      # @param secure [Boolean] Whether sign the request with a method signature and session key
+      #     (one exception being auth methods, which require a method signature but no session key)
+      # @param params [Hash]    Parameters to send, excluding method, api_key, api_sig, and sk
+      #
+      # @return [LibXML::XML::Document] XML Document of the data contained in the response
       def get( method, secure = false, params = {} )
         response = Net::HTTP.get_response( HOST, generate_path(method, secure, params) )
-        data = XmlSimple.xml_in( response.body, 'ForceArray' => FORCE_ARRAY, 'KeyAttr' => KEY_ATTR )
-        catch_errors( data )
-        data
+        xml = LibXML::XML::Parser.string( response.body ).parse
+        catch_errors( xml )
+        xml
       end
 
     private
 
       def catch_errors( data )
-        raise LastFMError, data['error']['content'] if data['status'] == 'failed'
+        raise LastFMError, data.find_first('error').content if data.root.attributes['status'] == 'failed'
       end
 
       def load_config_property( config, property )
