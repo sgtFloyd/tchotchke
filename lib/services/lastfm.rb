@@ -31,7 +31,7 @@ module Services
         !!@session_key
       end
 
-      # Load properties from the config file from into instance variables.
+      # Load properties from the config file into instance variables.
       #
       # @raise [ConfigurationError] if the config file is incomplete
       def load_config
@@ -58,9 +58,10 @@ module Services
       # @return [LibXML::XML::Document] xml document of the data contained in the response
       # @raise [LastFMError] if the request fails
       def get( method, secure = false, params = {} )
+        params.delete_if{ |k,v| v.nil? }
         response = Net::HTTP.get_response( HOST, generate_path(method, secure, params) )
         xml = LibXML::XML::Parser.string( response.body ).parse
-        find_errors( xml )
+        find_errors( xml, url )
         xml
       end
 

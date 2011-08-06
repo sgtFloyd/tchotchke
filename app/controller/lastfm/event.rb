@@ -4,37 +4,42 @@ module LastFM
   class Event
     class << self
 
-      # see: http://www.last.fm/api/show?service=307
+      TYPE = 'event'
+
+      # @see http://www.last.fm/api/show?service=307
       def attend( event, status )
         Services::LastFM.requires_authentication
         raise NotImplementedError
+        # Requires HTTP POST
       end
     
-      # see: http://www.last.fm/api/show?service=391
+      # @see http://www.last.fm/api/show?service=391
       def get_attendees( event, limit = nil, page = nil )
-        raise NotImplementedError
+        Services::LastFM.get( "#{TYPE}.getAttendees", !:secure, 'event'=>event, 'limit'=>limit, 'page'=>page )
       end
     
-      # see: http://www.last.fm/api/show?service=292
+      # @see http://www.last.fm/api/show?service=292
       def get_info( event )
-        raise NotImplementedError
+        Services::LastFM.get( "#{TYPE}.getInfo", !:secure, 'event'=>event )
       end
     
-      # see: http://www.last.fm/api/show?service=399
+      # @see http://www.last.fm/api/show?service=399
       def get_shouts( event, limit = nil, page = nil )
-        raise NotImplementedError
+        Services::LastFM.get( "#{TYPE}.getShouts", !:secure, 'event'=>event, 'limit'=>limit, 'page'=>page )
       end
     
-      # see: http://www.last.fm/api/show?service=350
+      # @see http://www.last.fm/api/show?service=350
       def share( event, recipient, publicize = nil, message = nil )
         Services::LastFM.requires_authentication
         raise NotImplementedError
+        # Requires HTTP POST
       end
     
-      # see: http://www.last.fm/api/show?service=409
+      # @see http://www.last.fm/api/show?service=409
       def shout( event, message )
         Services::LastFM.requires_authentication
         raise NotImplementedError
+        # Requires HTTP POST
       end
 
     end

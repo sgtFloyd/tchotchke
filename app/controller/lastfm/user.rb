@@ -4,6 +4,8 @@ module LastFM
   class User
     class << self
 
+      TYPE = 'user'
+
       # see: http://www.last.fm/api/show?service=432
       def get_artist_tracks( user, artist, start_timestamp = nil, end_timestamp = nil, page = nil )
       end
@@ -109,6 +111,7 @@ module LastFM
       # see: http://www.last.fm/api/show?service=411
       def shout( user, message )
         Services::LastFM.requires_authentication
+        # Requires HTTP POST
       end
 
     end

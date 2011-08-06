@@ -4,6 +4,8 @@ module LastFM
   class Venue
     class << self
 
+      TYPE = 'venue'
+
       # see: http://www.last.fm/api/show?service=394
       def get_events( venue, festivals_only = nil )
       end

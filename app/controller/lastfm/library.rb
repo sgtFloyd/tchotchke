@@ -4,19 +4,24 @@ module LastFM
   class Library
     class << self
 
+      TYPE = 'library'
+
       # see: http://www.last.fm/api/show?service=370
       def add_album( artist, album )
         Services::LastFM.requires_authentication
+        # Requires HTTP POST
       end
 
       # see: http://www.last.fm/api/show?service=371
       def add_artist( artist )
         Services::LastFM.requires_authentication
+        # Requires HTTP POST
       end
 
       # see: http://www.last.fm/api/show?service=372
       def add_track( track, artist )
         Services::LastFM.requires_authentication
+        # Requires HTTP POST
       end
 
       # see: http://www.last.fm/api/show?service=321
@@ -34,21 +39,25 @@ module LastFM
       # see: http://www.last.fm/api/show?service=523
       def remove_album( artist, album )
         Services::LastFM.requires_authentication
+        # Requires HTTP POST
       end
 
       # see: http://www.last.fm/api/show?service=524
       def remove_artist( artist )
         Services::LastFM.requires_authentication
+        # Requires HTTP POST
       end
 
       # see: http://www.last.fm/api/show?service=525
       def remove_scrobble( track, artist, timestamp )
         Services::LastFM.requires_authentication
+        # Requires HTTP POST
       end
 
       # see: http://www.last.fm/api/show?service=526
       def remove_track( track, artist )
         Services::LastFM.requires_authentication
+        # Requires HTTP POST
       end
 
     end

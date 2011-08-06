@@ -4,28 +4,36 @@ module LastFM
   class Group
     class << self
 
-      # see: http://www.last.fm/api/show?service=259
+      TYPE = 'group'
+
+      # @see http://www.last.fm/api/show?service=259
       def get_hype( group )
+        Services::LastFM.get( "#{TYPE}.getHype", !:secure, 'group'=>group )
       end
     
-      # see: http://www.last.fm/api/show/?service=379
+      # @see http://www.last.fm/api/show/?service=379
       def get_members( group, limit = nil, page = nil )
+        Services::LastFM.get( "#{TYPE}.", !:secure, 'group'=>group, 'limit'=>limit, 'page'=>page )
       end
     
-      # see: http://www.last.fm/api/show/?service=293
+      # @see http://www.last.fm/api/show/?service=293
       def get_weekly_album_chart( group, date_from = nil, date_to = nil )
+        Services::LastFM.get( "#{TYPE}.getWeeklyAlbumChart", !:secure, 'group'=>group, 'from'=>date_from, 'to'=>date_to )
       end
     
-      # see: http://www.last.fm/api/show/?service=294
+      # @see http://www.last.fm/api/show/?service=294
       def get_weekly_artist_chart( group, date_from = nil, date_to = nil )
+        Services::LastFM.get( "#{TYPE}.getWeeklyArtistChart", !:secure, 'group'=>group, 'from'=>date_from, 'to'=>date_to )
       end
     
-      # see: http://www.last.fm/api/show/?service=295
+      # @see http://www.last.fm/api/show/?service=295
       def get_weekly_chart_list( group )
+        Services::LastFM.get( "#{TYPE}.getWeeklyChartList", !:secure, 'group'=>group )
       end
     
-      # see: http://www.last.fm/api/show/?service=296
+      # @see http://www.last.fm/api/show/?service=296
       def get_weekly_track_chart( group, date_from = nil, date_to = nil )
+        Services::LastFM.get( "#{TYPE}.getWeeklyTrackChart", !:secure, 'group'=>group, 'from'=>date_from, 'to'=>date_to )
       end
 
     end
