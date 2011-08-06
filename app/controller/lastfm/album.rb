@@ -22,7 +22,7 @@ module LastFM
       # @see http://www.last.fm/api/show?service=290
       def get_info( artist = nil, album = nil, mbid = nil, lang = nil, autocorrect = nil, username = nil )
         raise ArgumentError unless artist && album || mbid
-        Services::LastFM.get( "#{TYPE}.getInof", !:secure, 'artist'=>artist, 'album'=>album, 'mbid'=>mbid, 'lang'=>lang, 'autocorrect'=>autocorrect, 'username'=>username )
+        Services::LastFM.get( "#{TYPE}.getInfo", !:secure, 'artist'=>artist, 'album'=>album, 'mbid'=>mbid, 'lang'=>lang, 'autocorrect'=>autocorrect, 'username'=>username )
       end
 
       # @see http://www.last.fm/api/show?service=450

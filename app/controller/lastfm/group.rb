@@ -13,7 +13,7 @@ module LastFM
     
       # @see http://www.last.fm/api/show/?service=379
       def get_members( group, limit = nil, page = nil )
-        Services::LastFM.get( "#{TYPE}.", !:secure, 'group'=>group, 'limit'=>limit, 'page'=>page )
+        Services::LastFM.get( "#{TYPE}.getMembers", !:secure, 'group'=>group, 'limit'=>limit, 'page'=>page )
       end
     
       # @see http://www.last.fm/api/show/?service=293

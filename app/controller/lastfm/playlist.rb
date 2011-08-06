@@ -20,6 +20,7 @@ module LastFM
 
       # see: http://www.last.fm/api/show?service=271
       def fetch( playlist_url )
+        Services::LastFM.get( "#{TYPE}.fetch", !:secure, 'playlistURL'=>playlist_url )
       end
 
     end

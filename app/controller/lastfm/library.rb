@@ -26,14 +26,17 @@ module LastFM
 
       # see: http://www.last.fm/api/show?service=321
       def get_albums( user, artist = nil, limit = nil, page = nil )
+        Services::LastFM.get( "#{TYPE}.getAlbums", !:secure, 'user'=>user, 'artist'=>artist, 'limit'=>limit, 'page'=>page )
       end
 
       # see: http://www.last.fm/api/show?service=322
       def get_artists( user, limit = nil, page = nil )
+         Services::LastFM.get( "#{TYPE}.getArtists", !:secure, 'user'=>user, 'limit'=>limit, 'page'=>page )
       end
 
       # see: http://www.last.fm/api/show?service=323
       def get_tracks( user, artist = nil, album = nil, limit = nil, page = nil )
+        Services::LastFM.get( "#{TYPE}.getTracks", !:secure, 'user'=>user, 'artist'=>artist, 'album'=>album, 'limit'=>limit, 'page'=>page )
       end
 
       # see: http://www.last.fm/api/show?service=523
