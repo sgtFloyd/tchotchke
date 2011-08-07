@@ -9,8 +9,7 @@ module LastFM
       # @see http://www.last.fm/api/show?service=307
       def attend( event, status )
         Services::LastFM.requires_authentication
-        raise NotImplementedError
-        # Requires HTTP POST
+        Services::LastFM.post( "#{TYPE}.attend", 'event'=>event, 'status'=>status )
       end
     
       # @see http://www.last.fm/api/show?service=391

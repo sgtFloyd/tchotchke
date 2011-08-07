@@ -14,9 +14,9 @@ module LastFM
       end
 
       # @see http://www.last.fm/api/show?service=429
-      def get_buylinks( artist = nil, album = nil, mbid = nil, autocorrect = nil, country = nil )
+      def get_buylinks( country, artist = nil, album = nil, mbid = nil, autocorrect = nil )
         raise ArgumentError unless artist && album || mbid
-        Services::LastFM.get( "#{TYPE}.getBuylinks", !:secure, 'artist'=>artist, 'album'=>album, 'mbid'=>mbid, 'autocorrect'=>autocorrect, 'country'=>country  )
+        Services::LastFM.get( "#{TYPE}.getBuylinks", !:secure, 'country'=>country, 'artist'=>artist, 'album'=>album, 'mbid'=>mbid, 'autocorrect'=>autocorrect  )
       end
 
       # @see http://www.last.fm/api/show?service=290
@@ -26,9 +26,9 @@ module LastFM
       end
 
       # @see http://www.last.fm/api/show?service=450
-      def get_shouts( artist = nil, mbid = nil, autocorrect = nil, limit = nil, page = nil )
-        raise ArgumentError unless artist || mbid
-        Services::LastFM.get( "#{TYPE}.getShouts", !:secure, 'artist'=>artist, 'mbid'=>mbid, 'autocorrect'=>autocorrect, 'limit'=>limit, 'page'=>page )
+      def get_shouts( artist = nil, album = nil, mbid = nil, autocorrect = nil, limit = nil, page = nil )
+        raise ArgumentError unless artist && album || mbid
+        Services::LastFM.get( "#{TYPE}.getShouts", !:secure, 'artist'=>artist, 'album'=>album, 'mbid'=>mbid, 'autocorrect'=>autocorrect, 'limit'=>limit, 'page'=>page )
       end
 
       # @see http://www.last.fm/api/show?service=317
@@ -53,7 +53,7 @@ module LastFM
 
       # @see http://www.last.fm/api/show?service=357
       def search( album, limit = nil, page = nil )
-        Services::LastFM.get( "#{TYPE}.search", !:secure, 'artist'=>artist, 'limit'=>limit, 'page'=>page )
+        Services::LastFM.get( "#{TYPE}.search", !:secure, 'album'=>album, 'limit'=>limit, 'page'=>page )
       end
 
       # @see http://www.last.fm/api/show?service=436

@@ -1,3 +1,4 @@
 /config/lastfm.yml
 /.yardoc
 /doc
+/log/*.log
