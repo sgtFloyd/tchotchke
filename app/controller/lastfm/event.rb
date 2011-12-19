@@ -30,15 +30,13 @@ module LastFM
       # @see http://www.last.fm/api/show?service=350
       def share( event, recipient, publicize = nil, message = nil )
         Services::LastFM.requires_authentication
-        raise NotImplementedError
-        # Requires HTTP POST
+        Services::LastFM.post( "#{TYPE}.share", 'event'=>event, 'recipient'=>recipient, 'public'=>publicize, 'message'=>message )
       end
     
       # @see http://www.last.fm/api/show?service=409
       def shout( event, message )
         Services::LastFM.requires_authentication
-        raise NotImplementedError
-        # Requires HTTP POST
+        Services::LastFM.post( "#{TYPE}.shout", 'event'=>event, 'message'=>message )
       end
 
     end
