@@ -130,7 +130,7 @@ module Services
       # @return [String] md5 digest of the username and password
       # @private
       def generate_auth_token( username, password )
-        Digest::MD5.hexdigest( username + Digest::MD5.hexdigest(password) )
+        Digest::MD5.hexdigest( username << Digest::MD5.hexdigest(password) )
       end
 
       # Generate the path for a particular method call given params.
@@ -143,10 +143,10 @@ module Services
       def generate_path( method, secure, params={} )
         params = complete_params( method, secure, params )
         url = "/2.0/?method=#{params.delete('method')}"
-        params.keys.each do |param|
-          url += "&#{param}=#{params[param]}"
+        params.keys.each do |key|
+          url << "&#{key}=#{params[key]}"
         end
-        url.gsub(/ /, '%20')
+        URI.encode(url)
       end
 
       # Generate a method signature based on given parameters.
@@ -158,9 +158,9 @@ module Services
       def generate_method_signature( params )
         str = ''
         params.keys.sort.each do |key|
-          str += key + params[key]
+          str << key << params[key]
         end
-        Digest::MD5.hexdigest( str + @api_secret )
+        Digest::MD5.hexdigest( str << @api_secret )
       end
 
     end
