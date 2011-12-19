@@ -135,7 +135,7 @@ module LastFM
       # @see http://www.last.fm/api/show?service=411
       def shout( user, message )
         Services::LastFM.requires_authentication
-        # Requires HTTP POST
+        Services::LastFM.post( "#{TYPE}.shout", 'user'=>user, 'message'=>message )
       end
 
     end

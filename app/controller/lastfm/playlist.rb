@@ -9,13 +9,13 @@ module LastFM
       # see: http://www.last.fm/api/show?service=337
       def add_track( playlist_id, artist, track )
         Services::LastFM.requires_authentication
-        # Requires HTTP POST
+        Services::LastFM.post( "#{TYPE}.addTrack", 'playlistID'=>playlist_id, 'artist'=>artist, 'track'=>track )
       end
 
       # see: http://www.last.fm/api/show?service=365
       def create( title = nil, description = nil )
         Services::LastFM.requires_authentication
-        # Requires HTTP POST
+        Services::LastFM.post( "#{TYPE}.create", 'title'=>title, 'description'=>description )
       end
 
       # see: http://www.last.fm/api/show?service=271

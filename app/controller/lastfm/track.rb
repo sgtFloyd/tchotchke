@@ -9,13 +9,13 @@ module LastFM
       # @see http://www.last.fm/api/show?service=304
       def add_tags( track, artist, tags )
         Services::LastFM.requires_authentication
-        # Requires HTTP POST
+        Services::LastFM.post( "#{TYPE}.addTags", 'track'=>track, 'artist'=>artist, 'tags'=>tags )
       end
 
       # @see http://www.last.fm/api/show?service=261
       def ban( track, artist )
         Services::LastFM.requires_authentication
-        # Requires HTTP POST
+        Services::LastFM.post( "#{TYPE}.ban", 'track'=>track, 'artist'=>artist )
       end
 
       # @see http://www.last.fm/api/show?service=431
@@ -56,7 +56,7 @@ module LastFM
       def get_tags( track = nil, artist = nil, mbid = nil, autocorrect = nil )
         raise ArgumentError unless artist && track || mbid
         Services::LastFM.requires_authentication
-        # Requires HTTP POST
+        Services::LastFM.post( "#{TYPE}.getTags", 'track'=>track, 'artist'=>artist, 'mbid'=>mbid, 'autocorrect'=>autocorrect )
       end
 
       # @see http://www.last.fm/api/show?service=312
@@ -72,21 +72,21 @@ module LastFM
       end
 
       # @see http://www.last.fm/api/show?service=260
-      def love( track = nil, artist = nil )
+      def love( track, artist )
         Services::LastFM.requires_authentication
-        # Requires HTTP POST
+        Services::LastFM.post( "#{TYPE}.love", 'track'=>track, 'artist'=>artist )
       end
 
       # @see http://www.last.fm/api/show?service=316
       def remove_tag( track, artist, tag )
         Services::LastFM.requires_authentication
-        # Requires HTTP POST
+        Services::LastFM.post( "#{TYPE}.removeTag", 'track'=>track, 'artist'=>artist, 'tag'=>tag )
       end
 
       # @see http://www.last.fm/api/show?service=443
       def scrobble( tracks, artists, timestamps, albums = nil, album_artists = nil, contexts = nil, stream_ids = nil, track_numbers = nil, mbids = nil, durations = nil )
         Services::LastFM.requires_authentication
-        # Requires HTTP POST
+        # Requires complicated logic & HTTP POST
       end
 
       # @see http://www.last.fm/api/show?service=286
@@ -97,25 +97,25 @@ module LastFM
       # @see http://www.last.fm/api/show?service=305
       def share( track, artist, recipient, message = nil, public = nil )
         Services::LastFM.requires_authentication
-        # Requires HTTP POST
+        Services::LastFM.post( "#{TYPE}.share", 'track'=>track, 'artist'=>artist, 'recipient'=>recipient, 'message'=>message, 'public'=>public )
       end
 
       # @see http://www.last.fm/api/show?service=449
       def unban( track, artist )
         Services::LastFM.requires_authentication
-        # Requires HTTP POST
+        Services::LastFM.post( "#{TYPE}.unban", 'track'=>track, 'artist'=>artist )
       end
 
       # @see http://www.last.fm/api/show?service=440
       def unlove( track, artist )
         Services::LastFM.requires_authentication
-        # Requires HTTP POST
+        Services::LastFM.post( "#{TYPE}.unlove", 'track'=>track, 'artist'=>artist )
       end
 
       # @see http://www.last.fm/api/show?service=454
       def update_now_playing( track, artist, album = nil, album_artist = nil, context = nil, track_number = nil, mbid = nil, duration = nil )
         Services::LastFM.requires_authentication
-        # Requires HTTP POST
+        Services::LastFM.post( "#{TYPE}.updateNowPlaying", 'track'=>track, 'artist'=>artist, 'album'=>album, 'albumArtist'=>album_artist, 'context'=>context, 'trackNumber'=>track_number, 'mbid'=>mbid, 'duration'=>duration )
       end
 
     end

@@ -9,8 +9,7 @@ module LastFM
       # @see http://www.last.fm/api/show/?service=303
       def add_tags( artist, tags )
         Services::LastFM.requires_authentication
-        raise NotImplementedError
-        # Requires HTTP POST
+        Services::LastFM.post( "#{TYPE}.addTags", 'artist'=>artist, 'tags'=>tags )
       end
 
       # @see http://www.last.fm/api/show/?service=446
@@ -94,8 +93,7 @@ module LastFM
       # @see http://www.last.fm/api/show/?service=315
       def remove_tag( artist, tag )
         Services::LastFM.requires_authentication
-        raise NotImplementedError
-        # Requires HTTP POST
+        Services::LastFM.post( "#{TYPE}.removeTag", 'artist'=>artist, 'tag'=>tag )
       end
 
       # @see http://www.last.fm/api/show/?service=272
@@ -106,15 +104,13 @@ module LastFM
       # @see http://www.last.fm/api/show/?service=306
       def share( artist, recipient, message = nil, public = nil )
         Services::LastFM.requires_authentication
-        raise NotImplementedError
-        # Requires HTTP POST
+        Services::LastFM.post( "#{TYPE}.share", 'artist'=>artist, 'recipient'=>recipient, 'message'=>message, 'public'=>public )
       end
 
       # @see http://www.last.fm/api/show/?service=408
       def shout( artist, message )
         Services::LastFM.requires_authentication
-        raise NotImplementedError
-        # Requires HTTP POST
+        Services::LastFM.post( "#{TYPE}.shout", 'artist'=>artist, 'message'=>message )
       end
 
     end

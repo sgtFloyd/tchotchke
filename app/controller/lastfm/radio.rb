@@ -21,7 +21,7 @@ module LastFM
       # see: http://www.last.fm/api/show?service=160
       def tune( station, lang = nil )
         Services::LastFM.requires_authentication
-        # Requires HTTP POST
+        Services::LastFM.post( "#{TYPE}.tune", 'station'=>station, 'lang'=>lang )
       end
 
     end
