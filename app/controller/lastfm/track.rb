@@ -95,7 +95,7 @@ module LastFM
       end
 
       # @see http://www.last.fm/api/show?service=305
-      def share( track, artist, recipient, message = nil, publicize = nil )
+      def share( track, artist, recipient, message = nil, public = nil )
         Services::LastFM.requires_authentication
         # Requires HTTP POST
       end

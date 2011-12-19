@@ -28,9 +28,9 @@ module LastFM
       end
     
       # @see http://www.last.fm/api/show?service=350
-      def share( event, recipient, publicize = nil, message = nil )
+      def share( event, recipient, public = nil, message = nil )
         Services::LastFM.requires_authentication
-        Services::LastFM.post( "#{TYPE}.share", 'event'=>event, 'recipient'=>recipient, 'public'=>publicize, 'message'=>message )
+        Services::LastFM.post( "#{TYPE}.share", 'event'=>event, 'recipient'=>recipient, 'public'=>public, 'message'=>message )
       end
     
       # @see http://www.last.fm/api/show?service=409
