@@ -1,3 +1,3 @@
 source :rubygems
 
-gem 'libxml-ruby'
+gem 'rscrobbler'
