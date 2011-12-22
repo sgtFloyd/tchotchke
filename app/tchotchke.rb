@@ -1,14 +1,15 @@
-# add lib directory to ruby's search path
-$ROOT = File.expand_path(File.dirname(__FILE__) + "/..")
-$: << $ROOT + "/lib" << $ROOT + "/app"
 
 require 'logger'
-require 'services/lastfm'
-require 'controller/lastfm/event'
+require 'rscrobbler'
+require 'yaml'
 
-$LOGGER = Logger.new(File.expand_path(File.dirname(__FILE__) + "/../log/tchotchke.log"), 'daily')
+$LOGGER = Logger.new('log/tchotchke.log', 'daily')
+$CONFIG = YAML.load_file('config/tchotchke.yml')
 
-Services::LastFM.load_config
-Services::LastFM.authenticate!
-
-#puts LastFM::Event.attend( 1950483, 1 )
+LastFM.logger = $LOGGER
+LastFM.establish_session do |session|
+  session.username    = $CONFIG[:lastfm_username]
+  session.auth_token  = $CONFIG[:lastfm_auth_token]
+  session.api_key     = $CONFIG[:lastfm_api_key]
+  session.api_secret  = $CONFIG[:lastfm_api_secret]
+end

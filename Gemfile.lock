@@ -1,12 +1,14 @@
 GEM
   remote: http://rubygems.org/
   specs:
-    libxml-ruby (2.1.2)
-    libxml-ruby (2.1.2-x86-mingw32)
+    libxml-ruby (2.2.2)
+    libxml-ruby (2.2.2-x86-mingw32)
+    rscrobbler (0.0.6)
+      libxml-ruby
 
 PLATFORMS
   ruby
   x86-mingw32
 
 DEPENDENCIES
-  libxml-ruby
+  rscrobbler
