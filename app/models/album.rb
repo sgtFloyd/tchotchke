@@ -1,21 +1,20 @@
 class Album
 
-  # Last.fm metadata: name, artist, id, mbid, url, release date, image small,
-  # image medium, image large, image extra large, image mega, listeners,
-  # playcount, tracks, tags, wiki summary, wiki content
+  attr_accessor :mbid, :name, :tags, :artist, :tracks
 
-  # Important metadata: name, artist, tracks, mbid
+  class << self
+    def get_info(album_name, artist_name)
+    end
 
-  # Get metadata based on album name.
-  def self.get_info(album_name)
-    #LastFM::Album.get_info
-    #Return Album object populated with metadata
+    def search(album_name)
+    end
   end
 
-  # Search for albums based on name, returns matches sorted by relevance
-  def self.search(album_name)
-    #LastFM::Album.search
-    #Return Album objects populated with metadata
+  def get_info
+    self.get_info(self.name, self.artist.name)
+  end
+
+  def get_top_tags
   end
 
 end

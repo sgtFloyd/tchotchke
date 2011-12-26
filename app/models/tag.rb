@@ -1,23 +1,29 @@
 class Tag
 
-  # Last.fm metadata: name, url, reach, taggings, streamable, wiki summary
-  # wiki content
+  attr_accessor :name
 
-  # Important metadata: name
+  class << self
+    def get_info(tag_name)
+    end
 
-  def self.get_info(tag_name)
+    def get_top_tags(tag_name)
+    end
+
+    def search(tag_name)
+    end
   end
 
-  def self.get_top_albums(tag_name)
+  def get_info
+    self.get_info(self.name)
   end
 
-  def self.get_top_artists(tag_name)
+  def get_top_albums
   end
 
-  def self.get_top_tracks(tag_name)
+  def get_top_artists
   end
 
-  def self.search(tag_name)
+  def get_top_tracks
   end
 
 end
