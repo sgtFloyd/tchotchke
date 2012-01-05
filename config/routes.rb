@@ -10,5 +10,6 @@ end
 
 get '/load' do
   pass unless request.xhr?
+  sleep 5
   "Loaded!"
 end
