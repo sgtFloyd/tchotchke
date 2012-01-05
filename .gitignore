@@ -1,4 +1,5 @@
-/config/lastfm.yml
-/.yardoc
-/doc
-/log/*.log*
+.sass-cache
+.yardoc
+config/*.yml
+doc
+log
