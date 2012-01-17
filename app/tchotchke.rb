@@ -1,6 +1,9 @@
 
+require 'haml'
 require 'logger'
 require 'rscrobbler'
+require 'sass'
+require 'sinatra'
 require 'yaml'
 
 $LOGGER = Logger.new('log/tchotchke.log', 'daily')
@@ -13,3 +16,5 @@ LastFM.establish_session do |session|
   session.api_key     = $CONFIG[:lastfm_api_key]
   session.api_secret  = $CONFIG[:lastfm_api_secret]
 end
+
+load 'config/routes.rb'
