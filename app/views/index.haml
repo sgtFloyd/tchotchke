@@ -1,36 +1,38 @@
-- lines = 32
+-# see: nimlok-louisiana.com/blog/create-custom-search-bars-with-image-replacement-using-css/
+
+- rows = 32     # needs to be kept consistent with tchotchke.sass
+- columns = 40  # 40 characters per column, based on 1080 width and 15 font size
+- border = '|<br>'*rows
 
 %html
   %head
     %title Tchotchke
-    %link{:rel => "stylesheet", :type => "text/css", :href => "css/tchotchke.css"}
-    %script{:type => 'text/javascript',  :src => 'js/jquery.js'}
-
-    :javascript
-      $.ajax({
-        url: "/load",
-        cache: false,
-        success: function(html){
-          $("#async .loading").replaceWith(html);
-        }
-      });
+    %link{ rel:'stylesheet', type:'text/css', href:'css/tchotchke.css' }
+    %script{ type:'text/javascript', src:'js/jquery.js' }
+    %script{ type:'text/javascript', src:'js/tchotchke.js' }
 
   %body
     .inner
       .borders
         .left
-          - lines.times do
-            &nbsp;<br>
-        .middle.loading
-          - lines.times do
-            |<br>
+          &nbsp;
+        .middle
+          = border
         .right
-          - lines.times do
-            |<br>
+          = border
 
       .content
+
         .left
-          ="| Left"
+          .search
+            %form#search
+              %input#query
+          - ['artist', 'album', 'track'].each do |type|
+            %div.results.hidden{ id: "#{type}_results" }
+              .result_type
+                ="#{type.capitalize}s:"
+              .result_content
+
         .middle
           ="| Middle"
         .right

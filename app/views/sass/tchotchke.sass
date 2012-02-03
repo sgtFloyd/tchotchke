@@ -2,7 +2,11 @@ $grey: #303030
 $white: #FEFEFE
 $pink: #F02475
 
+$rows: 32
+$font_size: 15px
 $width: 1080px
+$height: ($font_size+2)*$rows
+
 
 body
   background-color: $grey
@@ -12,26 +16,37 @@ body
   margin: 0
   a
     color: $white
+    text-decoration: none
     &:hover
       color: $pink
+
+.hidden
+  display: none
+
+.inner
+  width: $width
+  height: $height
+  margin: 0 auto
 
 .borders
   position: fixed
   z-index: -1
 
-.inner
-  width: $width
-  margin: 0 auto
+.results
+  height: 30%
 
 .left
   float: left
   width: $width/3
+  height: $height
 .middle
   float: left
   width: $width/3
+  height: $height
 .right
   float: right
   width: $width/3
+  height: $height
 
 .loading
   background: url(/img/loading.gif) center no-repeat
