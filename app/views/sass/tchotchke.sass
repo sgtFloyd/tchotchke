@@ -2,7 +2,7 @@ $grey: #303030
 $white: #FEFEFE
 $pink: #F02475
 
-$rows: 32
+$rows: 37
 $font_size: 15px
 $width: 1080px
 $height: ($font_size+2)*$rows
@@ -20,6 +20,12 @@ body
     &:hover
       color: $pink
 
+form
+  margin-bottom: 0
+  input
+    padding: 0
+    border: none
+
 .hidden
   display: none
 
@@ -33,7 +39,7 @@ body
   z-index: -1
 
 .results
-  height: 30%
+  height: (12*($font_size+2))
 
 .left
   float: left

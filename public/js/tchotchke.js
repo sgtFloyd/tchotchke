@@ -47,5 +47,6 @@ function traSearch(track) {
 };
 
 $(document).ready(function() {
+  // intercept search box
   $('#search').submit(searchAll);
 });

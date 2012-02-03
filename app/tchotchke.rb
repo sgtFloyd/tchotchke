@@ -17,4 +17,9 @@ LastFM.establish_session do |session|
   session.api_secret  = $CONFIG[:lastfm_api_secret]
 end
 
+require_relative 'models/artist'
+require_relative 'models/album'
+require_relative 'models/tag'
+require_relative 'models/track'
+
 load 'config/routes.rb'
