@@ -1,7 +1,37 @@
-body
-  background-color: #303030
+$grey: #303030
+$white: #FEFEFE
+$pink: #F02475
 
-img.loading
-  background-image: url(images/loading.gif)
-  width: 100px
-  height: 100px
+$width: 1080px
+
+body
+  background-color: $grey
+  font-family: monospace
+  font-size: 15px
+  color: $white
+  margin: 0
+  a
+    color: $white
+    &:hover
+      color: $pink
+
+.borders
+  position: fixed
+  z-index: -1
+
+.inner
+  width: $width
+  margin: 0 auto
+
+.left
+  float: left
+  width: $width/3
+.middle
+  float: left
+  width: $width/3
+.right
+  float: right
+  width: $width/3
+
+.loading
+  background: url(/img/loading.gif) center no-repeat

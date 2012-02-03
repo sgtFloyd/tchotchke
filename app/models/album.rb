@@ -11,7 +11,7 @@ class Album
   end
 
   def get_info
-    self.get_info(self.name, self.artist.name)
+    Album.get_info(self.name, self.artist.name)
   end
 
   def get_top_tags

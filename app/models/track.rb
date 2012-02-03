@@ -11,7 +11,7 @@ class Track
   end
 
   def get_info
-    self.get_info(self.name, self.artist.name)
+    Track.get_info(self.name, self.artist.name)
   end
 
   def get_similar

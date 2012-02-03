@@ -11,7 +11,7 @@ class Artist
   end
 
   def get_info
-    self.get_info(self.name)
+    Artist.get_info(self.name)
   end
 
   def get_similar

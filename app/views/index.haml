@@ -1,3 +1,5 @@
+- lines = 32
+
 %html
   %head
     %title Tchotchke
@@ -9,12 +11,27 @@
         url: "/load",
         cache: false,
         success: function(html){
-          $("#async img.loading").replaceWith(html);
+          $("#async .loading").replaceWith(html);
         }
       });
 
   %body
-    %p
-      ="The time is now #{Time.now}"
-    #async
-      %img.loading
+    .inner
+      .borders
+        .left
+          - lines.times do
+            &nbsp;<br>
+        .middle.loading
+          - lines.times do
+            |<br>
+        .right
+          - lines.times do
+            |<br>
+
+      .content
+        .left
+          ="| Left"
+        .middle
+          ="| Middle"
+        .right
+          ="| Right"
