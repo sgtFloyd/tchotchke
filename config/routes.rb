@@ -12,15 +12,15 @@ end
 # Artist, Album, Track Searching
 get '/art/:artist' do
   pass unless request.xhr?
-  haml :results, locals: { results: Tchotchke::Artist.search(params[:artist]) }
+  haml :results, locals: { type: :artist, results: Tchotchke::Artist.search(params[:artist]) }
 end
 
 get '/alb/:album' do
   pass unless request.xhr?
-  haml :results, locals: { results: Tchotchke::Album.search(params[:album]) }
+  haml :results, locals: { type: :album, results: Tchotchke::Album.search(params[:album]) }
 end
 
 get '/tra/:track' do
   pass unless request.xhr?
-  haml :results, locals: { results: Tchotchke::Track.search(params[:track]) }
+  haml :results, locals: { type: :track, results: Tchotchke::Track.search(params[:track]) }
 end

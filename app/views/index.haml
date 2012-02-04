@@ -16,9 +16,9 @@
       .borders
         .left
           &nbsp;
-        .middle
+        .middle.hidden
           = border
-        .right
+        .right.hidden
           = border
 
       .content
@@ -28,12 +28,12 @@
             %form#search
               %input#query
           - ['artist', 'album', 'track'].each do |type|
-            %div.results.hidden{ id: "#{type}_results" }
+            .results.hidden{ id: "#{type}_results" }
               .result_type
                 ="#{type.capitalize}s:"
               .result_content
 
-        .middle
+        .middle.hidden
           ="| Middle"
-        .right
+        .right.hidden
           ="| Right"

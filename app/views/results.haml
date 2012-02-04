@@ -1,3 +1,4 @@
 - results.each do |result|
-  ="> #{result}"[0..39]
+  =">"
+  %a{class:"#{type}_result",href:'javascript:'}= result[0..37]
   %br
