@@ -6,10 +6,10 @@ require 'sass'
 require 'sinatra'
 require 'yaml'
 
-$LOGGER = Logger.new('log/tchotchke.log', 'daily')
+#$LOGGER = Logger.new('log/tchotchke.log', 'daily')
 $CONFIG = YAML.load_file('config/tchotchke.yml')
 
-LastFM.logger = $LOGGER
+#LastFM.logger = $LOGGER
 LastFM.establish_session do |session|
   session.username    = $CONFIG[:lastfm_username]
   session.auth_token  = $CONFIG[:lastfm_auth_token]
