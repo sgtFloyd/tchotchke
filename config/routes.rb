@@ -10,17 +10,17 @@ get '/css/:file.css' do
 end
 
 # Artist, Album, Track Searching
-get '/art/:artist' do
+get '/artist/search/:artist' do
   pass unless request.xhr?
   haml :results, locals: { type: :artist, results: Tchotchke::Artist.search(params[:artist]) }
 end
 
-get '/alb/:album' do
+get '/album/search/:album' do
   pass unless request.xhr?
   haml :results, locals: { type: :album, results: Tchotchke::Album.search(params[:album]) }
 end
 
-get '/tra/:track' do
+get '/track/search/:track' do
   pass unless request.xhr?
   haml :results, locals: { type: :track, results: Tchotchke::Track.search(params[:track]) }
 end
