@@ -5,8 +5,8 @@ function emptySearchResults() {
 };
 
 function highlightSearchResult(element) {
-  $('a').removeClass('highlight');
-  element.addClass('highlight');
+  $('.result').removeClass('highlight');
+  element.closest('.result').addClass('highlight');
 };
 
 // hide and empty middle and right panes
