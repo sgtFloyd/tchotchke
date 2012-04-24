@@ -1,7 +1,7 @@
 function emptySearchResults() {
-  $('#artist_results .result_content').empty();
-  $('#album_results .result_content').empty();
-  $('#track_results .result_content').empty();
+  $('#artist_results .content').empty();
+  $('#album_results .content').empty();
+  $('#track_results .content').empty();
 };
 
 function highlightSearchResult(element) {
@@ -10,15 +10,14 @@ function highlightSearchResult(element) {
 };
 
 // hide and empty middle and right panes
-function hideAndEmptyInfoPanes() {
+function hideInfoPanes() {
   $('.middle, .right').addClass('hidden');
-  $('.content .middle, .content .right').empty();
 };
 
 // un-hide the given panes and show the loading animation in them
-function showAndLoadPanes(panes) {
+function showPanes(panes) {
   $.each(panes, function() {
-    $('.content .'+this).addClass('loading');
+    //$('.content .'+this).addClass('loading');
     $('.'+this).removeClass('hidden');
   });
 };
@@ -28,7 +27,7 @@ function showAndLoadPanes(panes) {
 function searchAll(e) {
   var query = $('#search #query').val();
   emptySearchResults();
-  hideAndEmptyInfoPanes();
+  hideInfoPanes();
   $.each(['artist', 'album', 'track'], function() {
     doSearch(this, query);
   });
@@ -38,31 +37,66 @@ function searchAll(e) {
 
 function doSearch(type, query) {
   $('#'+type+'_results').removeClass('hidden').addClass('loading');
-  var callbackFuntion;
   $.ajax({
     url: '/'+type+'/search/'+query, // GET /artist/search/Madonna
     cache: false,
-    success: function(html){
+    success: function(html) {
       $('#'+type+'_results').removeClass('loading');
-      $('#'+type+'_results .result_content').html(html);
+      $('#'+type+'_results .content').html(html);
       $('.'+type+'_result').click(function() {
         highlightSearchResult($(this));
-        getInfo(type, $(this).text());
+        getInfo(type, $(this));
       });
     }
   });
 };
 
-function getInfo(type, query) {
+function getArtistDetails(element) {
+  showPanes(['middle']);
+  var artist = element.closest('.result').attr('data-artist');
+  $('.artist_name').html('|&nbsp;' + artist);
+  loadAlbums(artist);
+  loadSimilar(artist);
+};
+function loadAlbums(artist) {
+  $('.top_albums').addClass('loading');
+  $.ajax({
+    url: '/artist/'+artist+'/albums',
+    cache: false,
+    success: function(html) {
+      $('.top_albums').removeClass('loading');
+      $('.top_albums .content').html(html);
+    }
+  });
+};
+function loadSimilar(artist) {
+  $('.similar_artists').addClass('loading');
+  $.ajax({
+    url: '/artist/'+artist+'/similar',
+    cache: false,
+    success: function(html) {
+      $('.similar_artists').removeClass('loading');
+      $('.similar_artists .content').html(html);
+    }
+  });
+};
+
+
+function getTracks(element) {
+  showPanes(['middle', 'right']);
+  var artist = element.attr('data-artist');
+};
+
+function getInfo(type, element) {
+  hideInfoPanes();
   if (type == 'artist') {
-    hideAndEmptyInfoPanes();
-    showAndLoadPanes(['middle']);
+    getArtistDetails(element);
   } else if (type == 'album') {
-    hideAndEmptyInfoPanes();
-    showAndLoadPanes(['middle', 'right']);
+    getArtistDetails(element);
+    getTracks(element);
   } else if (type == 'track') {
-    hideAndEmptyInfoPanes();
-    showAndLoadPanes(['middle', 'right']);
+    getArtistDetails(element);
+    getTracks(element);
   }
 };
 

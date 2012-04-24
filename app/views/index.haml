@@ -31,10 +31,17 @@
           - ['artist', 'album', 'track'].each do |type|
             .results.hidden{ id: "#{type}_results" }
               .result_type
-                ="#{type.capitalize}s:"
-              .result_content
+                ="&nbsp;&nbsp;#{type.capitalize}s:"
+              .content
 
         .middle.hidden
-          ="| Middle"
+          .artist_name
+          .top_albums
+            = "| Top Albums:"
+            .content
+          .similar_artists
+            = "| Similar Artists:"
+            .content
+
         .right.hidden
           ="| Right"
