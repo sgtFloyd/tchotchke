@@ -1,6 +1,6 @@
 
 require 'haml'
-require 'logger'
+#require 'logger'
 require 'rscrobbler'
 require 'sass'
 require 'sinatra'
@@ -19,7 +19,9 @@ end
 
 require_relative 'models/artist'
 require_relative 'models/album'
-require_relative 'models/tag'
 require_relative 'models/track'
 
-load 'config/routes.rb'
+load 'app/controllers/tchotchke_controller.rb'
+load 'app/controllers/artist_controller.rb'
+load 'app/controllers/album_controller.rb'
+load 'app/controllers/track_controller.rb'
