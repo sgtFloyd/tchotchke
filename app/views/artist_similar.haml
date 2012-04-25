@@ -1,3 +1,3 @@
 - artists.each do |artist|
-  .similar_artist
-    ="&nbsp;&nbsp;&nbsp#{artist.name[0..36]}"
+  .result{ 'data-artist' => artist.name }
+    %a.similar_artist{href:'javascript:'}="&nbsp;&nbsp;&nbsp#{artist.name[0..36]}"

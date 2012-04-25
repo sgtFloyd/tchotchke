@@ -1,5 +1,6 @@
 
 require 'haml'
+require 'json'
 #require 'logger'
 require 'rscrobbler'
 require 'sass'
@@ -16,10 +17,6 @@ LastFM.establish_session do |session|
   session.api_key     = $CONFIG[:lastfm_api_key]
   session.api_secret  = $CONFIG[:lastfm_api_secret]
 end
-
-require_relative 'models/artist'
-require_relative 'models/album'
-require_relative 'models/track'
 
 load 'app/controllers/tchotchke_controller.rb'
 load 'app/controllers/artist_controller.rb'

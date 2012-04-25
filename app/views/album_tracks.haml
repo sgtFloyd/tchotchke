@@ -1,0 +1,17 @@
+:ruby
+  def pad(total, i)
+    i = i+1
+    return "#{i}." if total < 10
+    return "0#{i}." if i < 10
+    "#{i}."
+  end
+
+  def format(sec)
+    min, sec = sec.divmod 60
+    sec = "0#{sec}" if sec < 10
+    "#{min}:#{sec}"
+  end
+
+- tracks = album.tracks
+- tracks.each_with_index do |track, i|
+  .track= "&nbsp;&nbsp;&nbsp;#{pad(tracks.count, i)} #{track.name} (#{format(track.duration)})"

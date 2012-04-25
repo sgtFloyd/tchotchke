@@ -1,4 +1,4 @@
 - tracks.each do |track|
-  .result{ 'data-artist' => track.artist, 'data-track' => track.name }
+  .result{ 'data-artist' => track.artist, 'data-album' => track.album, 'data-track' => track.name }
     =">"
-    %a{class:"track_result", href:'javascript:'}= track.name[0..37]
+    %a.track_result{href:'javascript:'}= track.name

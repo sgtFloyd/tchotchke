@@ -1,4 +1,4 @@
 - artists.each do |artist|
   .result{ 'data-artist' => artist.name }
     =">"
-    %a{class:"artist_result", href:'javascript:'}= artist.name[0..37]
+    %a.artist_result{href:'javascript:'}= artist.name

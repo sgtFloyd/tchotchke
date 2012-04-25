@@ -5,7 +5,8 @@ $pink: #F02475
 $rows: 37
 $font_size: 15px
 $width: 1080px
-$height: ($font_size+2)*$rows
+$row_height: $font_size+2 
+$height: $row_height*$rows
 
 
 body
@@ -26,9 +27,6 @@ form
     padding: 0
     border: none
 
-.highlight
-  color: $pink
-
 .hidden
   display: none
 
@@ -42,12 +40,20 @@ form
   z-index: -1
 
 .results
-  margin-top: $font_size+2
-  height: (11*($font_size+2))
+  margin-top: $row_height
+  height: 11*$row_height
+  .result
+    white-space: nowrap
 
 .top_albums, .similar_artists
-  margin-top: $font_size+2
-  height: (17*($font_size+2))
+  margin-top: $row_height
+  height: 17*$row_height
+
+.tracks
+  margin-top: $row_height
+  height: 35*$row_height
+  .track
+    white-space: nowrap
 
 .left
   float: left
