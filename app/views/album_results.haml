@@ -1,4 +1,8 @@
-- albums.each do |album|
-  .result{ 'data-artist' => album.artist, 'data-album' => album.name }
-    =">"
-    %a.album_result{href:'javascript:'}= album.name
+- if albums.length > 0
+  - albums.each do |album|
+    .result{ 'data-artist' => album.artist, 'data-album' => album.name }
+      ="~"
+      %a.album_result{href:'javascript:'}= album.name
+- else
+  %br
+  %i= "No albums found."

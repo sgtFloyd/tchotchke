@@ -1,3 +1,8 @@
-- artists.each do |artist|
-  .result{ 'data-artist' => artist.name }
-    %a.similar_artist{href:'javascript:'}="&nbsp;&nbsp;&nbsp#{artist.name[0..36]}"
+- if artists.length > 0
+  - artists.each do |artist|
+    .result{ 'data-artist' => artist.name }
+      ="&nbsp;~"
+      %a.similar_artist{href:'javascript:'}= artist.name[0..36]
+- else
+  %br
+  %i= "&nbsp;&nbsp;No albums found."

@@ -67,7 +67,7 @@ function getArtistDetails(element) {
   $('.right').addClass('hidden');
   $('.middle').removeClass('hidden');
   var artist = element.closest('.result').attr('data-artist');
-  $('.artist_name').html('&nbsp;&nbsp;' + artist);
+  $('.artist_name').html('&nbsp;&nbsp;' + artist.substring(0,38));
   loadAlbums(artist);
   loadSimilar(artist);
 };
@@ -115,7 +115,7 @@ function getAlbumDetails(element) {
   $('.right').removeClass('hidden');
   var artist = element.closest('.result').attr('data-artist'),
       album = element.closest('.result').attr('data-album');
-  $('.album_name').html('&nbsp;&nbsp;' + album);
+  $('.album_name').html('&nbsp;&nbsp;' + album.substring(0,38));
   loadTracks(artist, album);
 };
 
@@ -152,7 +152,7 @@ function loadTracksFromTrack(artist, track) {
     url: '/artist/'+artist+'/track/'+track+'/info',
     cache: false,
     success: function(json) {
-      $('.album_name').html('&nbsp;&nbsp;' + json.album);
+      $('.album_name').html('&nbsp;&nbsp;' + json.album.substring(0,38));
       loadTracks(artist, json.album);
     }
   });

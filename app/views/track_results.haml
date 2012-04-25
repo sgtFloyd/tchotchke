@@ -1,4 +1,8 @@
-- tracks.each do |track|
-  .result{ 'data-artist' => track.artist, 'data-album' => track.album, 'data-track' => track.name }
-    =">"
-    %a.track_result{href:'javascript:'}= track.name
+- if tracks.count > 0
+  - tracks.each do |track|
+    .result{ 'data-artist' => track.artist, 'data-album' => track.album, 'data-track' => track.name }
+      ="~"
+      %a.track_result{href:'javascript:'}= track.name
+- else
+  %br
+  %i= "No tracks found."

@@ -13,5 +13,9 @@
   end
 
 - tracks = album.tracks
-- tracks.each_with_index do |track, i|
-  .track= "&nbsp;&nbsp;&nbsp;#{pad(tracks.count, i)} #{track.name} (#{format(track.duration)})"
+- if tracks && tracks.length > 0
+  - tracks.each_with_index do |track, i|
+    .track= "&nbsp;&nbsp;#{pad(tracks.count, i)} #{track.name} <i>(#{format(track.duration)})</i>"
+- else
+  %br
+  %i= "&nbsp;&nbsp;No tracks found."

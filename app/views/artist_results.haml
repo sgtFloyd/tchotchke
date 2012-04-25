@@ -1,4 +1,8 @@
-- artists.each do |artist|
-  .result{ 'data-artist' => artist.name }
-    =">"
-    %a.artist_result{href:'javascript:'}= artist.name
+- if artists.count > 0
+  - artists.each do |artist|
+    .result{ 'data-artist' => artist.name }
+      ="~"
+      %a.artist_result{href:'javascript:'}= artist.name
+- else
+  %br
+  %i= "No artists found."
