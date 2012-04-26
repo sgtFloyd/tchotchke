@@ -157,9 +157,9 @@ function loadTracksFromTrack(artist, track) {
     url: '/track/info',
     data: {artist: artist, track: track},
     cache: false,
-    success: function(json) {
-      $('.album_name').html('&nbsp;&nbsp;' + json.album.substring(0,38));
-      loadTracks(artist, json.album);
+    success: function(track) {
+      $('.album_name').html('&nbsp;&nbsp;' + track.album.name.substring(0,38));
+      loadTracks(artist, track.album.name);
     }
   });
 };

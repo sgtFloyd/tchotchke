@@ -13,16 +13,7 @@ module Tchotchke
     get '/track/info' do
       content_type :json
       track = Track.get_info(params[:artist], params[:track])
-      { :id => track.id, :mbid => track.mbid,
-        :name => track.name,
-        :position => track.position,
-        :artist => track.artist.name,
-        :album => track.album.name,
-        :duration => track.duration,
-        :listeners => track.listeners,
-        :playcount => track.playcount,
-        :url => track.url
-      }.to_json
+      track.to_json
     end
 
   end

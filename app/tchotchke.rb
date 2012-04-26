@@ -1,6 +1,5 @@
 
 require 'haml'
-require 'json'
 #require 'logger'
 require 'rscrobbler'
 require 'sass'
