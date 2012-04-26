@@ -4,7 +4,7 @@ module Tchotchke
 
       # Search for albums based on name
       def search(album)
-        LastFM::Api::Album.search(:album => album, :limit => 10)
+        LastFM::Api::Album.search(:album => album)
       rescue LastFM::LastFMError => e
       end
 

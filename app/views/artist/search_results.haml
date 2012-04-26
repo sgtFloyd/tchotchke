@@ -1,5 +1,5 @@
 - if artists && artists.count > 0
-  - artists.each do |artist|
+  - artists.first(10).each do |artist|
     .result{ 'data-artist' => artist.name }
       ="~"
       %a.artist_result{href:'javascript:'}= artist.name

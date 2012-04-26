@@ -1,5 +1,5 @@
 - if albums && albums.length > 0
-  - albums.each do |album|
+  - albums.first(16).each do |album|
     .result{ 'data-artist' => album.artist.name, 'data-album' => album.name }
       ="&nbsp;~"
       %a.top_album{href:'javascript:'}= album.name[0..36]

@@ -1,5 +1,5 @@
 - if artists.length > 0
-  - artists.each do |artist|
+  - artists.first(16).each do |artist|
     .result{ 'data-artist' => artist.name }
       ="&nbsp;~"
       %a.similar_artist{href:'javascript:'}= artist.name[0..36]

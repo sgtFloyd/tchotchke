@@ -4,7 +4,7 @@ module Tchotchke
 
       # Search for tracks based on name
       def search(track)
-        LastFM::Api::Track.search(:track => track, :limit => 10)
+        LastFM::Api::Track.search(:track => track)
       rescue LastFM::LastFMError => e
       end
 
