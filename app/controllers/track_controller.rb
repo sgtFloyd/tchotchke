@@ -7,7 +7,7 @@ module Tchotchke
 
     get '/track/search' do
       search_results = Track.search(params[:track])
-      haml :track_results, locals: { tracks: search_results }
+      haml :'track/search_results', locals: { tracks: search_results }
     end
 
     get '/track/info' do

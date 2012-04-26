@@ -7,6 +7,10 @@ require 'sass'
 require 'sinatra'
 require 'yaml'
 
+require_relative 'models/artist'
+require_relative 'models/album'
+require_relative 'models/track'
+
 #$LOGGER = Logger.new('log/tchotchke.log', 'daily')
 $CONFIG = YAML.load_file('config/tchotchke.yml')
 
@@ -25,15 +29,9 @@ get '/' do
 end
 
 get '/css/:file.css' do
-  sass :"sass/#{params[:file]}"
+  sass :"styles/#{params[:file]}"
 end
-
-require_relative 'models/artist'
-require_relative 'models/album'
-require_relative 'models/track'
 
 load 'app/controllers/artist_controller.rb'
 load 'app/controllers/album_controller.rb'
 load 'app/controllers/track_controller.rb'
-
-
