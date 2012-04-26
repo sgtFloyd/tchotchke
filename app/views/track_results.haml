@@ -1,4 +1,4 @@
-- if tracks.count > 0
+- if tracks && tracks.count > 0
   - tracks.each do |track|
     .result{ 'data-artist' => track.artist, 'data-album' => track.album, 'data-track' => track.name }
       ="~"

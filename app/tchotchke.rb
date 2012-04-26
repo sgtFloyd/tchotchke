@@ -18,7 +18,22 @@ LastFM.establish_session do |session|
   session.api_secret  = $CONFIG[:lastfm_api_secret]
 end
 
-load 'app/controllers/tchotchke_controller.rb'
+set :public_folder, 'public'
+
+get '/' do
+  haml :index
+end
+
+get '/css/:file.css' do
+  sass :"sass/#{params[:file]}"
+end
+
+require_relative 'models/artist'
+require_relative 'models/album'
+require_relative 'models/track'
+
 load 'app/controllers/artist_controller.rb'
 load 'app/controllers/album_controller.rb'
 load 'app/controllers/track_controller.rb'
+
+

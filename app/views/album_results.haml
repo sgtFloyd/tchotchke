@@ -1,4 +1,4 @@
-- if albums.length > 0
+- if albums && albums.length > 0
   - albums.each do |album|
     .result{ 'data-artist' => album.artist, 'data-album' => album.name }
       ="~"

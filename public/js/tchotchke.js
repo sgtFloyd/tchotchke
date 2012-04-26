@@ -32,8 +32,10 @@ function trimSearchResults() {
 
 function doSearch(type, query) {
   $('#'+type+'_results').removeClass('hidden').addClass('loading');
+  data = {}; data[type] = query
   $.ajax({
-    url: '/'+type+'/search/'+query,
+    url: '/'+type+'/search',
+    data: data,
     cache: false,
     success: function(html) {
       $('#'+type+'_results').removeClass('loading');
@@ -77,7 +79,8 @@ function loadAlbums(artist) {
   $('.top_albums .content').html('');
   $('.top_albums').addClass('loading');
   $.ajax({
-    url: '/artist/'+artist+'/albums',
+    url: '/artist/albums',
+    data: {artist: artist},
     cache: false,
     success: function(html) {
       $('.top_albums').removeClass('loading');
@@ -94,7 +97,8 @@ function loadSimilar(artist) {
   $('.similar_artists .content').html('');
   $('.similar_artists').addClass('loading');
   $.ajax({
-    url: '/artist/'+artist+'/similar',
+    url: '/artist/similar',
+    data: {artist: artist},
     cache: false,
     success: function(html) {
       $('.similar_artists').removeClass('loading');
@@ -123,7 +127,8 @@ function loadTracks(artist, album) {
   $('.tracks .content').html('');
   $('.tracks').addClass('loading');
   $.ajax({
-    url: '/artist/'+artist+'/album/'+album+'/info',
+    url: '/album/tracks',
+    data: {artist: artist, album: album},
     cache: false,
     success: function(html) {
       $('.tracks').removeClass('loading');
@@ -149,7 +154,8 @@ function loadTracksFromTrack(artist, track) {
   $('.tracks .content').html('');
   $('.tracks').addClass('loading');
   $.ajax({
-    url: '/artist/'+artist+'/track/'+track+'/info',
+    url: '/track/info',
+    data: {artist: artist, track: track},
     cache: false,
     success: function(json) {
       $('.album_name').html('&nbsp;&nbsp;' + json.album.substring(0,38));

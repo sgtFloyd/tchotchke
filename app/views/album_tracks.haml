@@ -12,7 +12,6 @@
     "#{min}:#{sec}"
   end
 
-- tracks = album.tracks
 - if tracks && tracks.length > 0
   - tracks.each_with_index do |track, i|
     .track= "&nbsp;&nbsp;#{pad(tracks.count, i)} #{track.name} <i>(#{format(track.duration)})</i>"
