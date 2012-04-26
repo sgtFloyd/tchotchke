@@ -31,7 +31,6 @@ form
   display: none
 
 .inner
-  width: $width
   height: $height
   margin: 0 auto
 
@@ -52,7 +51,10 @@ form
 
 .tracks
   margin-top: $row_height
-  height: 35*$row_height
+  .content
+    height: 34*$row_height
+    overflow-x: hidden
+    overflow-y: auto
   .track
     white-space: nowrap
 
@@ -65,9 +67,13 @@ form
   width: $width/3
   height: $height
 .right
-  float: right
-  width: $width/3
+  float: left
   height: $height
 
 .loading
   background: url(/img/loading.gif) center no-repeat
+
+::-webkit-scrollbar
+  width: 2px
+::-webkit-scrollbar-thumb
+  background: $white
