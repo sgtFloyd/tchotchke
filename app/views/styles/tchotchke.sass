@@ -32,7 +32,9 @@ form
 
 .inner
   height: $height
-  margin: 0 auto
+  position: absolute
+  left: 50%
+  margin-left: -$width/2
 
 .borders
   position: fixed
@@ -53,7 +55,6 @@ form
   margin-top: $row_height
   .content
     height: 34*$row_height
-    overflow-x: hidden
     overflow-y: auto
   .track
     white-space: nowrap
