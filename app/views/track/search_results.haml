@@ -2,7 +2,7 @@
   %table
     - tracks.each do |track|
       %tr.result{ 'data-artist' => track.artist, 'data-album' => track.album, 'data-track' => track.name }
-        %td= "~&nbsp;"
+        %td= "&nbsp;~&nbsp;"
         %td
           %a.track_result{href:'javascript:'}= track.name
 - else

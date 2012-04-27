@@ -31,20 +31,20 @@
           - ['artist', 'album', 'track'].each do |type|
             .results.hidden{ id: "#{type}_results" }
               .result_type
-                ="&nbsp;&nbsp;#{type.capitalize}s:"
+                .header= "&nbsp;&nbsp;#{type.capitalize}s:"
               .content
 
         .middle.hidden
           .artist_name
           .top_albums
-            = "&nbsp;&nbsp;&nbsp;Top Albums:"
+            .header= "&nbsp;&nbsp;Top Albums:"
             .content
           .similar_artists
-            = "&nbsp;&nbsp;&nbsp;Similar Artists:"
+            .header= "&nbsp;&nbsp;Similar Artists:"
             .content
 
         .right.hidden
           .album_name
           .tracks
-            = "&nbsp;&nbsp;&nbsp;Tracks:"
+            .header= "&nbsp;&nbsp;Tracks:"
             .content

@@ -2,7 +2,7 @@
   def pad(total, i)
     i = i+1
     return "#{i}." if total < 10
-    return "0#{i}." if i < 10
+    return "&nbsp;#{i}." if i < 10
     "#{i}."
   end
 
@@ -19,7 +19,8 @@
         %td.track_num= "&nbsp;#{pad(tracks.count, i)}&nbsp;"
         %td.track_name
           = "#{track.name}"
-          %i= "(#{format(track.duration)})"
+          .track_len
+            %i= "(#{format(track.duration)})"
 - else
   %br
   %i= "&nbsp;&nbsp;No tracks found."

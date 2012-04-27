@@ -1,6 +1,7 @@
-$grey: #303030
-$white: #FEFEFE
-$pink: #F02475
+$grey:  rgba(48,   48,  48, 1) // #303030
+$white: rgba(254, 254, 254, 1) // #FEFEFE
+$pink:  rgba(240,  36, 117, 1) // #F02475
+$white_50: rgba(254, 254, 254, 0.5)
 
 $rows: 37
 $font_size: 15px
@@ -25,6 +26,7 @@ table, th, tr, td
   border: none
   font-size: $font_size
   line-height: $font_size
+  line-spacing: 20px
   border-spacing: 0
   vertical-align: top
 
@@ -36,6 +38,10 @@ form
 
 .hidden
   display: none
+
+.header
+  border-bottom: 1px $white_50 solid
+  margin: 0 $font_size*2
 
 .inner
   height: $height
@@ -65,6 +71,10 @@ form
   .content
     height: 34*$row_height
     overflow-y: auto
+  .track_len
+    font-size: ($font_size - 2)
+    display: inline
+    color: $white_50
 
 .left
   float: left
