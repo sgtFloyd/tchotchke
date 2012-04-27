@@ -21,6 +21,12 @@ body
     &:hover
       color: $pink
 
+table, th, tr, td
+  border: none
+  font-size: $font_size
+  border-spacing: 0
+  vertical-align: top
+
 form
   margin-bottom: 0
   input
@@ -32,12 +38,13 @@ form
 
 .inner
   height: $height
+  width: $width
   position: absolute
   left: 50%
   margin-left: -$width/2
 
 .borders
-  position: fixed
+  position: absolute
   z-index: -1
 
 .results
@@ -56,8 +63,6 @@ form
   .content
     height: 34*$row_height
     overflow-y: auto
-  .track
-    white-space: nowrap
 
 .left
   float: left
@@ -69,6 +74,7 @@ form
   height: $height
 .right
   float: left
+  width: $width/3
   height: $height
 
 .loading
@@ -76,5 +82,6 @@ form
 
 ::-webkit-scrollbar
   width: 2px
+  height: 2px
 ::-webkit-scrollbar-thumb
   background: $white

@@ -13,8 +13,13 @@
   end
 
 - if tracks && tracks.length > 0
-  - tracks.each_with_index do |track, i|
-    .track= "&nbsp;&nbsp;#{pad(tracks.count, i)} #{track.name} <i>(#{format(track.duration)})</i>"
+  %table
+    - tracks.each_with_index do |track, i|
+      %tr.track
+        %td.track_num= "&nbsp;#{pad(tracks.count, i)}&nbsp;"
+        %td.track_name
+          = "#{track.name}"
+          %i= "(#{format(track.duration)})"
 - else
   %br
   %i= "&nbsp;&nbsp;No tracks found."
