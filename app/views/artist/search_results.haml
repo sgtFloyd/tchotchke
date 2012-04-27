@@ -1,8 +1,10 @@
 - if artists && artists.count > 0
-  - artists.first(10).each do |artist|
-    .result{ 'data-artist' => artist.name }
-      ="~"
-      %a.artist_result{href:'javascript:'}= artist.name
+  %table
+    - artists.each do |artist|
+      %tr.result{ 'data-artist' => artist.name }
+        %td= "~&nbsp;"
+        %td
+          %a.artist_result{href:'javascript:'}= artist.name
 - else
   %br
   %i= "No artists found."

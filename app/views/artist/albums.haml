@@ -1,8 +1,10 @@
 - if albums && albums.length > 0
-  - albums.first(16).each do |album|
-    .result{ 'data-artist' => album.artist.name, 'data-album' => album.name }
-      ="&nbsp;~"
-      %a.top_album{href:'javascript:'}= album.name[0..36]
+  %table
+    - albums.each do |album|
+      %tr.result{ 'data-artist' => album.artist.name, 'data-album' => album.name }
+        %td= "&nbsp;~&nbsp;"
+        %td
+          %a.top_album{href:'javascript:'}= album.name
 - else
   %br
   %i= "&nbsp;&nbsp;No albums found."

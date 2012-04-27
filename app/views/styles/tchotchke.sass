@@ -24,6 +24,7 @@ body
 table, th, tr, td
   border: none
   font-size: $font_size
+  line-height: $font_size
   border-spacing: 0
   vertical-align: top
 
@@ -49,14 +50,15 @@ form
 
 .results
   margin-top: $row_height
-  height: 11*$row_height
-
-.result
-  white-space: nowrap
+  .content
+    height: 10*$row_height
+    overflow-y: auto
 
 .top_albums, .similar_artists
   margin-top: $row_height
-  height: 17*$row_height
+  .content
+    height: 16*$row_height
+    overflow-y: auto
 
 .tracks
   margin-top: $row_height
