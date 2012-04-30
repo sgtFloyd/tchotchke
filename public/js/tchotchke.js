@@ -31,6 +31,7 @@ function trimSearchResults() {
 };
 
 function doSearch(type, query) {
+  $('.banner').hide();
   $('#'+type+'_results').removeClass('hidden').addClass('loading');
   data = {}; data[type] = query
   $.ajax({
