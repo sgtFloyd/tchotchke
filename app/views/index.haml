@@ -11,12 +11,12 @@
     %script= "window.jQuery || document.write(unescape(\"%3Cscript src='js/jquery.js' type='text/javascript'%3E%3C/script%3E\"));"
     %script{ type:'text/javascript', src:'js/tchotchke.js' }
 
-  %body
-    .inner
+  %body.styled
+    .inner.titled-pane
       .left.panel
         .search
           %form#search
-            %input#query
+            %input#query.styled.header{:size => columns - 8, :placeholder => ' search for music'}
         - ['artist', 'album', 'track'].each do |type|
           .results.titled-pane.hidden{ id: "#{type}_results" }
             .result_type

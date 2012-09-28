@@ -1,7 +1,7 @@
 $grey:  rgba(48,   48,  48, 1) // #303030
 $white: rgba(254, 254, 254, 1) // #FEFEFE
 $pink:  rgba(240,  36, 117, 1) // #F02475
-$white_50: rgba(254, 254, 254, 0.5)
+$white_50: rgba(254, 254, 254, 0.35)
 
 $rows: 37
 $font_size: 15px
@@ -9,12 +9,7 @@ $width: 1080px
 $row_height: $font_size+2
 $height: $row_height*$rows
 
-
 body
-  background-color: $grey
-  font-family: monospace
-  font-size: $font_size
-  color: $white
   margin: 0
   a
     color: $white
@@ -34,7 +29,14 @@ form
   margin-bottom: 0
   input
     padding: 0
+    outline: none
     border: none
+
+.styled
+  background-color: $grey
+  font-family: monospace
+  font-size: $font_size
+  color: $white
 
 .hidden
   display: none

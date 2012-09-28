@@ -1,5 +1,6 @@
 $(document).ready(function() {
   $('#search').submit(searchAll); // intercept search box
+  $('#query').focus();
 });
 
 // search artists, albums, and tracks for the given query,
