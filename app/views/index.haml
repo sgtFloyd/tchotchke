@@ -2,7 +2,6 @@
 
 - rows = 37     # needs to be kept consistent with tchotchke.sass
 - columns = 40  # 40 characters per column, based on 1080 width and 15 font size
-- border = '|<br>'*rows
 
 %html
   %head
@@ -14,14 +13,6 @@
 
   %body
     .inner
-      .borders
-        .left
-          &nbsp;
-        .middle.hidden
-          = border
-        .right.hidden
-          = border
-
       .content
         .banner
         .left
