@@ -62,9 +62,6 @@ function getInfo(type, element) {
   }
 };
 
-  /////////////////////////////////////////////////////////////////
- //////////////////// artist-specific details ////////////////////
-/////////////////////////////////////////////////////////////////
 
 function getArtistDetails(element) {
   $('.right').addClass('hidden');
@@ -75,7 +72,7 @@ function getArtistDetails(element) {
   loadSimilar(artist);
 };
 
-// load albums into .top_albums in middle pane
+// load albums into .top_albums in middle panel
 function loadAlbums(artist) {
   $('.top_albums .content').html('');
   $('.top_albums').addClass('loading');
@@ -93,7 +90,7 @@ function loadAlbums(artist) {
   });
 };
 
-// load similar artists into .similar_artists in middle pane
+// load similar artists into .similar_artists in middle panel
 function loadSimilar(artist) {
   $('.similar_artists .content').html('');
   $('.similar_artists').addClass('loading');
@@ -111,9 +108,6 @@ function loadSimilar(artist) {
   });
 };
 
-  ////////////////////////////////////////////////////////////////
- //////////////////// album-specific details ////////////////////
-////////////////////////////////////////////////////////////////
 
 function getAlbumDetails(element) {
   $('.middle').removeClass('hidden');
@@ -124,6 +118,7 @@ function getAlbumDetails(element) {
   loadTracks(artist, album);
 };
 
+// load tracks into right panel
 function loadTracks(artist, album) {
   $('.tracks .content').html('');
   $('.tracks').addClass('loading');
@@ -138,9 +133,6 @@ function loadTracks(artist, album) {
   });
 };
 
-  ////////////////////////////////////////////////////////////////
- //////////////////// track-specific details ////////////////////
-////////////////////////////////////////////////////////////////
 
 function getTrackDetails(element) {
   $('.middle').removeClass('hidden');
@@ -150,6 +142,7 @@ function getTrackDetails(element) {
   loadTracksFromTrack(artist, track)
 }
 
+// get album for given track, and load album's tracks
 function loadTracksFromTrack(artist, track) {
   $('.album_name').html('&nbsp;&nbsp;');
   $('.tracks .content').html('');
