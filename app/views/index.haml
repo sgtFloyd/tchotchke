@@ -13,28 +13,27 @@
 
   %body
     .inner
-      .content
-        .left
-          .search
-            %form#search
-              %input#query
-          - ['artist', 'album', 'track'].each do |type|
-            .results.hidden{ id: "#{type}_results" }
-              .result_type
-                .header= "&nbsp;&nbsp;#{type.capitalize}s:"
-              .content
-
-        .middle.hidden
-          .artist_name
-          .top_albums
-            .header= "&nbsp;&nbsp;Top Albums:"
-            .content
-          .similar_artists
-            .header= "&nbsp;&nbsp;Similar Artists:"
+      .left.panel
+        .search
+          %form#search
+            %input#query
+        - ['artist', 'album', 'track'].each do |type|
+          .results.titled-pane.hidden{ id: "#{type}_results" }
+            .result_type
+              .header= "&nbsp;&nbsp;#{type.capitalize}s:"
             .content
 
-        .right.hidden
-          .album_name
-          .tracks
-            .header= "&nbsp;&nbsp;Tracks:"
-            .content
+      .middle.panel.hidden
+        .artist_name
+        .top_albums.titled-pane
+          .header= "&nbsp;&nbsp;Top Albums:"
+          .content
+        .similar_artists.titled-pane
+          .header= "&nbsp;&nbsp;Similar Artists:"
+          .content
+
+      .right.panel.hidden
+        .album_name
+        .tracks.titled-pane
+          .header= "&nbsp;&nbsp;Tracks:"
+          .content

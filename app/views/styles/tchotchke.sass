@@ -50,40 +50,31 @@ form
   left: 50%
   margin-left: -$width/2
 
-.results
-  margin-top: $row_height
-  .content
-    height: 10*$row_height
-    overflow-y: auto
+.panel
+  float: left
+  width: $width/3
+  height: $height
+
+.results .content
+  height: 10*$row_height
 
 .top_albums, .similar_artists
-  margin-top: $row_height
   .content
     height: 16*$row_height
-    overflow-y: auto
 
 .tracks
-  margin-top: $row_height
   .content
     height: 34*$row_height
-    overflow-y: auto
   .track_len
     font-size: ($font_size - 2)
     display: inline
     color: $white_50
 
-.left
-  float: left
-  width: $width/3
-  height: $height
-.middle
-  float: left
-  width: $width/3
-  height: $height
-.right
-  float: left
-  width: $width/3
-  height: $height
+.content
+  overflow-y: auto
+
+.titled-pane
+  margin-top: $row_height
 
 .loading
   background: url(/img/loading.gif) center no-repeat
